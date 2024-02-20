@@ -1,4 +1,4 @@
-import Image from "next/image";
+import styles from "../styles/resets.module.scss";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
@@ -8,11 +8,36 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
+      className={styles.resets}
+      data-theme="retro"
+      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
       <Head>
-        <title>Chris | Full Stack</title>
+        <title>Chris | Full Stack Dev</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
       </Head>
       <NavBar />
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+          <img
+            src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">Box Office News!</h1>
+            <p className="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+              id nisi.
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
