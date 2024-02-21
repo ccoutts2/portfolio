@@ -1,0 +1,62 @@
+@import "variables.module.scss";
+
+$primary-background: green;
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap");
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.globals {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+
+  // NavBar Styling
+
+  .nav {
+    @include flex(row, space-between, baseline);
+    border-bottom: 1px solid black;
+
+    .title_container {
+      width: 40%;
+    }
+
+    .title {
+      font-size: 3rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    // NavLinks styling
+
+    .list_container {
+      @include flex(row, flex-end, baseline);
+      width: 60%;
+    }
+
+    .list {
+      @include flex(row, flex-end, baseline);
+      width: 100%;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .links {
+      text-decoration: none;
+    }
+
+    .link {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

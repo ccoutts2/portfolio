@@ -1,6 +1,15 @@
-// import resets from "../styles/partials/resets.module.scss";
-// // import "@/styles/variables.scss";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap"
+        />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }

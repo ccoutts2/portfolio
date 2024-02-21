@@ -1,13 +1,25 @@
 import Link from "next/link";
 import React from "react";
+import styles from "../../styles/globals.module.scss";
 
 const NavBar = () => {
   return (
-    <main className="navbar bg-base-100">
-      <Link href="/" className="btn btn-ghost text-xl">
-        Chris Coutts
-      </Link>
-    </main>
+    <header className={styles.nav}>
+      <div className={styles.title_container}>
+        <h1 className={styles.title}>Chris Coutts</h1>
+      </div>
+      <div className={styles.list_container}>
+        <ul className={styles.list}>
+          <Link href="#" className={styles.links}>
+            <li className={styles.link}>Projects</li>
+          </Link>
+          <Link href="#" className={styles.links}>
+            {" "}
+            <li className={styles.link}>Contact</li>
+          </Link>
+        </ul>
+      </div>
+    </header>
   );
 };
 
