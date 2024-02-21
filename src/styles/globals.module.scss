@@ -23,7 +23,7 @@ $primary-background: green;
   // NavBar Styling
 
   .nav {
-    @include flex(row, space-between, baseline);
+    @include flex(row, space-between, flex-end);
     border-bottom: 1px solid black;
 
     .title_container {
@@ -46,7 +46,7 @@ $primary-background: green;
     .list {
       @include flex(row, flex-end, baseline);
       width: 100%;
-      gap: 2rem;
+      gap: 1rem;
       list-style: none;
     }
 
