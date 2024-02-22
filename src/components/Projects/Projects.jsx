@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import styles from "../../styles/globals.module.scss";
-import triangulate from "../../assets/images/triangulate-1.png";
+import triangulate from "../../assets/images/triangulate-4.svg";
 import Image from "next/image";
 
 const Projects = () => {
   return (
     <main className={styles.projects}>
-      <h2>Projects</h2>
+      <h2 className={styles.title}>Projects</h2>
       <div>
         <article className={styles.article}>
           <div className={styles.text_container}>
@@ -21,6 +21,7 @@ const Projects = () => {
               <div className={styles.tech}>React</div>
               <div className={styles.tech}>Node</div>
               <div className={styles.tech}>Express</div>
+              <div className={styles.tech}>Knex</div>
               <div className={styles.tech}>MySQL</div>
               <div className={styles.tech}>MapBox</div>
             </div>

@@ -10,6 +10,12 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
+      <style jsx global>{`
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      `}</style>
     </>
   );
 }

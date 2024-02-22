@@ -1,8 +1,10 @@
 @import "variables.module.scss";
 
-$primary-background: #8d96a9;
+$primary-background: #cdcdcd;
 
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap");
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -19,7 +21,24 @@ $primary-background: #8d96a9;
     margin: 0;
     padding: 0;
     font-family: "Hanken Grotesk", sans-serif;
+    // font-family: "IBM Plex Mono", monospace;
+
     background-color: $primary-background;
+  }
+
+  html,
+  body {
+    margin: 0;
+  }
+
+  .scrollingBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Place it behind other content */
+    transition: background-color 0.5s ease; /* Adjust the duration and easing as needed */
   }
 
   // NavBar Styling
@@ -27,16 +46,17 @@ $primary-background: #8d96a9;
   .nav {
     @include flex(row, space-between, flex-end);
     border-bottom: 1px solid black;
-    // padding-inline: 1rem;
+    padding-inline: 1rem;
 
     .title_container {
       width: 40%;
     }
 
     .title {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin: 0;
       padding: 0;
+      font-weight: 400;
     }
 
     // NavLinks styling
@@ -63,13 +83,18 @@ $primary-background: #8d96a9;
   }
 
   .hero {
+    padding-inline: 1rem;
     .images {
       width: 4rem;
     }
   }
 
   .projects {
-    // padding-inline: 1rem;
+    padding-inline: 1rem;
+
+    .title {
+      font-weight: 400;
+    }
 
     .link {
       text-decoration: none;
@@ -97,9 +122,7 @@ $primary-background: #8d96a9;
     }
 
     .image_container {
-      height: 40vh;
-      box-shadow: rgba(50, 50, 93, 0.8) 0px 6px 12px -2px,
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      height: 100%;
     }
 
     .image {
@@ -110,7 +133,7 @@ $primary-background: #8d96a9;
     }
 
     .tech_stack {
-      @include flex(row, flex-start, stretch);
+      @include flex(row, space-around, stretch);
       flex-wrap: wrap;
       width: 100%;
       gap: 0.25rem;
@@ -124,6 +147,59 @@ $primary-background: #8d96a9;
       width: 3.25rem;
       padding: 0.2rem;
       text-align: center;
+      box-shadow: rgba(50, 50, 93, 0.8) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+  }
+
+  .about {
+    padding-top: 2rem;
+    padding-inline: 1rem;
+
+    .title {
+      font-weight: 400;
+    }
+
+    .text {
+      font-size: 0.8rem;
+    }
+
+    .button_container {
+      @include flex(row, flex-end, stretch);
+    }
+  }
+
+  .contact {
+    padding-top: 1rem;
+
+    .contact_section {
+      padding-top: 1rem;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      @include flex(row, flex-start, baseline);
+    }
+
+    .contact_email {
+      padding-left: 1rem;
+      width: 60%;
+    }
+
+    .contact_details {
+      gap: 1rem;
+      height: 5rem;
+      padding-right: 1rem;
+      height: 3rem;
+      width: 3rem;
+    }
+
+    .contact_text {
+      font-size: 0.7rem;
+    }
+
+    .contact_image {
+      object-fit: contain;
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
 }

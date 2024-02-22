@@ -17,7 +17,7 @@ const Hero = ({ images }) => {
                 alt={`Project ${image.id}`}
                 width={200}
                 height={200}
-                priority // Add this line
+                priority
               />
             ))}
         </div>
