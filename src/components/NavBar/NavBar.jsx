@@ -11,7 +11,7 @@ const NavBar = () => {
       <div className={styles.list_container}>
         <ul className={styles.list}>
           <Link href="#" className={styles.links}>
-            <li className={styles.link}>Projects</li>
+            <li className={styles.link}>About</li>
           </Link>
           <Link href="#" className={styles.links}>
             {" "}
