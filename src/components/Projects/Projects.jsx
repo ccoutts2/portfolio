@@ -2,34 +2,30 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "../../styles/globals.module.scss";
-import triangulate from "../../assets/images/triangulate-4.svg";
-import deliveroo from "../../assets/images/deliveroo-1.svg";
-import gollum from "../../assets/images/gollum-1.svg";
-import Image from "next/image";
 
 const Projects = () => {
-  // const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
 
-  // const fetchProjects = async () => {
-  //   try {
-  //     const { data } = await axios.get("/data/projects.json");
-  //     setProjects(data);
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  const fetchProjects = async () => {
+    try {
+      const { data } = await axios.get("/data/projects.json");
+      setProjects(data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // useEffect(() => {
-  //   fetchProjects();
-  // }, []);
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
   return (
     <main className={styles.projects}>
       <h2 className={styles.title}>/ projects</h2>
 
-      {/* {projects.map((project) => (
-        <div key={project.id} className={styles.projects}>
+      {projects.map((project) => (
+        <div key={project.id} className={styles.project}>
           <article className={styles.article}>
             <div className={styles.text_container}>
               {" "}
@@ -45,19 +41,17 @@ const Projects = () => {
             </div>
             <Link className={styles.link} href="/projects/triangulate">
               <div className={styles.image_container}>
-                <Image
+                <img
                   src={project.imageSrc}
                   className={styles.image}
                   alt={`image of ${project.title}`}
-                  width={200}
-                  height={400}
                 />
               </div>
             </Link>
           </article>
         </div>
-      ))} */}
-      <div className={styles.project}>
+      ))}
+      {/* <div className={styles.project}>
         <article className={styles.article}>
           <div className={styles.text_container}>
             {" "}
@@ -137,7 +131,7 @@ const Projects = () => {
             </div>
           </Link>
         </article>
-      </div>
+      </div> */}
     </main>
   );
 };

@@ -27,7 +27,7 @@ const Hero = () => {
           prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
       }
-    }, 500);
+    }, 800);
 
     return () => clearInterval(interval);
   }, [images]);

@@ -91,6 +91,7 @@
     .images {
       object-fit: contain;
       height: 100%;
+      width: 100%;
     }
   }
 
@@ -110,7 +111,9 @@
     }
 
     .article {
-      padding-top: 1rem;
+      margin-top: 1rem;
+      padding-top: 0.25rem;
+      border-top: 2px solid black;
       height: 43vh;
       @include flex(row, space-between, stretch);
     }

@@ -1,11 +1,6 @@
 "use client";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import styles from "../../styles/globals.module.scss";
-import Button from "../Button/Button";
-import Image from "next/image";
-import chris from "../../assets/images/chris-profile.svg";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
