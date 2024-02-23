@@ -205,4 +205,55 @@
       width: 1.5rem;
     }
   }
+
+  // About Page - Profile
+
+  .profile {
+    padding-inline: 1rem;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+    .title {
+      font-weight: 400;
+    }
+
+    .slider_container {
+      position: absolute;
+      bottom: calc(100vh - 7rem);
+    }
+
+    .slider {
+      position: relative;
+      white-space: nowrap;
+      display: flex;
+    }
+
+    .slider h2 {
+      margin: 0.5rem;
+      font-size: 2rem;
+      padding-right: 0.25rem;
+    }
+
+    .slider h2:nth-of-type(2) {
+      position: absolute;
+      left: 100%;
+    }
+
+    .text_section {
+      padding-top: 6rem;
+    }
+
+    // .image_container {
+    //   height: 10vh;
+    //   width: 10vh;
+    // }
+
+    // .image {
+    //   object-fit: contain;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: $primary-background;
+    // }
+  }
 }
