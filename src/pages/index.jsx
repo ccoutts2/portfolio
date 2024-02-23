@@ -2,7 +2,7 @@ import styles from "../styles/globals.module.scss";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
-// import Hero from "@/components/Hero/Hero";
+import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
@@ -29,7 +29,7 @@ export default function Home() {
         <title>Chris | Full Stack Dev</title>
       </Head>
       <NavBar />
-      {/* <Hero /> */}
+      <Hero />
       <About />
       <Projects />
       <div

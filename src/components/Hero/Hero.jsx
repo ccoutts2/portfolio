@@ -1,26 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/globals.module.scss";
 import Image from "next/image";
 import axios from "axios";
 
 const Hero = ({ images }) => {
+  // const [images, setImages] = useState(null);
+
+  // const fetchImages = async () => {
+  //   try {
+  //     const { data } = await axios.get("/data/images.json");
+  //     setImages(data);
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchImages();
+  // }, []);
+  console.log(images);
   return (
     <main>
       <div>
-        <p>Hello World</p>
-        <div>
-          {images &&
-            images.map((image) => (
-              <Image
-                key={image.id}
-                src={`${image.src}`}
-                alt={`Project ${image.id}`}
-                width={200}
-                height={200}
-                priority
-              />
-            ))}
-        </div>
+        {images &&
+          images.map((image) => (
+            <img
+              key={image.id}
+              src={`${image.imageSrc}`}
+              alt={`Project ${image.id}`}
+              width={500}
+              height={500}
+              className={styles.images}
+            />
+          ))}
       </div>
     </main>
   );
@@ -28,7 +41,8 @@ const Hero = ({ images }) => {
 
 export async function getStaticProps() {
   try {
-    const { data } = await axios.get("/data/images.json");
+    const { data } = await axios.get("/public/data/images.json");
+    console.log(data);
     return {
       props: {
         images: data,
