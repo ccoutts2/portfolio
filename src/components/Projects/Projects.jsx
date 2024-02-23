@@ -26,7 +26,7 @@ const Projects = () => {
 
   return (
     <main className={styles.projects}>
-      <h2 className={styles.title}>Projects</h2>
+      <h2 className={styles.title}>/ projects</h2>
 
       {/* {projects.map((project) => (
         <div key={project.id} className={styles.projects}>

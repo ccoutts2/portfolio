@@ -82,8 +82,15 @@
 
   .hero {
     padding-inline: 1rem;
+    @include flex(row, center, center);
+
+    .image_container {
+      padding-top: 1rem;
+      height: 70vh;
+    }
     .images {
-      width: 4rem;
+      object-fit: contain;
+      height: 100%;
     }
   }
 
