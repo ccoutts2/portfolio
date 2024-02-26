@@ -1,21 +1,19 @@
+import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router }) {
   return (
     <>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap"
-        />
-      </Head>
-      <Component {...pageProps} />
-      <style jsx global>{`
-        body {
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-      `}</style>
+      {/* <Head></Head> */}
+      <AnimatePresence mode="wait">
+        <Component key={router.route} {...pageProps} />
+        <style jsx global>{`
+          body {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+        `}</style>
+      </AnimatePresence>
     </>
   );
 }

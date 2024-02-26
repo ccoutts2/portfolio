@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
 import Profile from "@/components/Profile/Profile";
+import Inner from "@/components/Inner/Inner";
 
 export default function About() {
   return (
@@ -10,8 +11,10 @@ export default function About() {
       <Head>
         <title>Chris | Full Stack Dev</title>
       </Head>
-      <NavBar />
-      <Profile />
+      <Inner>
+        <NavBar />
+        <Profile />
+      </Inner>
     </main>
   );
 }

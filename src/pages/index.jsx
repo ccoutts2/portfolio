@@ -6,6 +6,8 @@ import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
+import { motion } from "framer-motion";
+import Inner from "@/components/Inner/Inner";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -28,17 +30,19 @@ export default function Home() {
       <Head>
         <title>Chris | Full Stack Dev</title>
       </Head>
-      <NavBar />
-      <Hero />
-      <About />
-      <Projects />
-      <div
-        className={styles.scrollingBackground}
-        style={{
-          backgroundColor: currentSection === "contact" ? "green" : "#cdcdcd",
-        }}
-      />
-      <Contact />
+      <Inner>
+        <NavBar />
+        <Hero />
+        <About />
+        <Projects />
+        <div
+          className={styles.scrollingBackground}
+          style={{
+            backgroundColor: currentSection === "contact" ? "green" : "#cdcdcd",
+          }}
+        />
+        <Contact />
+      </Inner>
     </main>
   );
 }

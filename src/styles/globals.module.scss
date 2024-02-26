@@ -29,6 +29,18 @@
     margin: 0;
   }
 
+  .inner {
+    .slide {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: red;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+    }
+  }
+
   .scrollingBackground {
     position: fixed;
     top: 0;
@@ -226,6 +238,7 @@
 
     .title {
       font-weight: 400;
+      padding-top: 1rem;
     }
 
     .slider_container {
