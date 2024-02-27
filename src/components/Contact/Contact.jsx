@@ -17,13 +17,19 @@ const Contact = () => {
         <div className={styles.contact_details}>
           {/* <h3 className={styles.contacts}>LinkedIn</h3> */}
           <Link href="https://www.linkedin.com/in/chris-coutts/" target="_blank">
-            <Image className={styles.contact_image} src={LinkedIn}></Image>
+            <img
+              className={styles.contact_image}
+              src={LinkedIn}
+              alt="linkedin logo"></img>
           </Link>
         </div>
         <div className={styles.contact_details}>
           {/* <h3 className={styles.contacts}>GitHub</h3> */}
           <Link target="_blank" href="https://github.com/ccoutts2/">
-            <Image className={styles.contact_image} src={GitHub}></Image>
+            <img
+              className={styles.contact_image}
+              src={GitHub}
+              alt="githuub logo"></img>
           </Link>
         </div>
       </section>

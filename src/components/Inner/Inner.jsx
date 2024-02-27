@@ -41,11 +41,35 @@ const Inner = ({ children }) => {
     },
   };
 
+  const perspective = {
+    initial: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+    },
+
+    enter: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+    },
+
+    exit: {
+      y: -100,
+      scale: 0.9,
+      opacity: 0.5,
+      transition: {
+        duration: 1.2,
+        ease: [0.76, 0, 0.24, 1],
+      },
+    },
+  };
+
   return (
     <div className={styles.inner}>
-      <motion.div {...anim(slide)} className={styles.slide}></motion.div>
-      <motion.div {...anim(opacity)} className={styles.page}>
-        {children}
+      <motion.div {...anim(slide)} className={styles.slide} />
+      <motion.div {...anim(perspective)} className={styles.page}>
+        <motion.div {...anim(opacity)}>{children}</motion.div>
       </motion.div>
     </div>
   );
