@@ -241,7 +241,7 @@
     padding-inline: 1rem;
     overflow: hidden;
     position: relative;
-    height: 200vh;
+    height: 180vh;
 
     .title {
       font-weight: 400;
@@ -250,7 +250,7 @@
 
     .slider_container {
       position: absolute;
-      bottom: calc(200vh - 8rem);
+      bottom: calc(180vh - 8rem);
     }
 
     .slider {
@@ -300,6 +300,10 @@
       width: 50%;
       gap: 0.5rem;
       text-transform: uppercase;
+    }
+
+    .container_header {
+      font-weight: 400;
     }
 
     .container_text {

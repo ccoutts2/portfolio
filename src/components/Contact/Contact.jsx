@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "../../styles/globals.module.scss";
 import Button from "../Button/Button";
-import Image from "next/image";
+import Image from "next/Image";
 import GitHub from "../../assets/logos/github-mark.svg";
 import LinkedIn from "../../assets/logos/linkedin.svg";
 
@@ -17,19 +17,19 @@ const Contact = () => {
         <div className={styles.contact_details}>
           {/* <h3 className={styles.contacts}>LinkedIn</h3> */}
           <Link href="https://www.linkedin.com/in/chris-coutts/" target="_blank">
-            <img
+            <Image
               className={styles.contact_image}
               src={LinkedIn}
-              alt="linkedin logo"></img>
+              alt="linkedin logo"></Image>
           </Link>
         </div>
         <div className={styles.contact_details}>
           {/* <h3 className={styles.contacts}>GitHub</h3> */}
           <Link target="_blank" href="https://github.com/ccoutts2/">
-            <img
+            <Image
               className={styles.contact_image}
               src={GitHub}
-              alt="githuub logo"></img>
+              alt="githuub logo"></Image>
           </Link>
         </div>
       </section>
