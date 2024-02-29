@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import styles from "../../styles/globals.module.scss";
+import styles from "./Contact.module.scss";
 import Button from "../Button/Button";
 import Image from "next/Image";
 import GitHub from "../../assets/logos/github-mark.svg";

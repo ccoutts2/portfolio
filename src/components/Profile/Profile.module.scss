@@ -1,0 +1,85 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.profile {
+  padding-inline: 1rem;
+  overflow: hidden;
+  position: relative;
+  height: 180vh;
+}
+
+.title {
+  font-weight: 400;
+  padding-top: 1rem;
+}
+
+.slider_container {
+  position: absolute;
+  bottom: calc(180vh - 8rem);
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.slider h2 {
+  margin: 0.5rem;
+  font-size: 2rem;
+  padding-right: 0.25rem;
+}
+
+.slider h2:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+}
+
+.text_section {
+  padding-top: 6rem;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+.text {
+  padding-top: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.links {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  @include flex(row, flex-start, stretch);
+}
+
+.links_container {
+  @include flex(column, center, flex-start);
+  width: 50%;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.container_header {
+  font-weight: 400;
+}
+
+.container_text {
+  font-weight: 400;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+}

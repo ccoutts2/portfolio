@@ -1,0 +1,44 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.nav {
+  @include flex(row, space-between, flex-end);
+  border-bottom: 1px solid black;
+  padding-inline: 1rem;
+}
+
+.title_container {
+  width: 40%;
+}
+
+.title {
+  font-size: 2.8rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.list_container {
+  @include flex(row, flex-end, baseline);
+}
+
+.list {
+  @include flex(row, flex-end, baseline);
+  width: 100%;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}

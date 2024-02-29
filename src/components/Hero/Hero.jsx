@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/globals.module.scss";
+import styles from "./Hero.module.scss";
 import axios from "axios";
 
 const Hero = () => {

@@ -72,7 +72,7 @@ export default function Home() {
 
           <Modal modal={modal} projects={projects} />
         </div>
-        {/* <Projects /> */}
+
         <Contact />
       </Inner>
     </main>

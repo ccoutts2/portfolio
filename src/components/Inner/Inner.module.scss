@@ -1,0 +1,17 @@
+$primary-background: #cdcdcd;
+
+.inner {
+  background-color: rgb(39, 33, 33);
+}
+.slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary-background;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+.page {
+  background-color: $primary-background;
+}

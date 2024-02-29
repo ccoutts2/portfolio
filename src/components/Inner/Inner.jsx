@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import styles from "../../styles/globals.module.scss";
+import styles from "./Inner.module.scss";
 
 const Inner = ({ children }) => {
   const anim = (variants) => {

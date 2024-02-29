@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "../../styles/globals.module.scss";
+import styles from "./Profile.module.scss";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import Button from "../Button/Button";

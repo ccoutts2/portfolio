@@ -1,0 +1,22 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.about {
+  padding: 2rem 1rem 0;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.text {
+  font-size: 0.8rem;
+}
+
+.button_container {
+  @include flex(row, flex-end, stretch);
+}

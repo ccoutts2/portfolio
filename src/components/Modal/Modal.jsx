@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-// import styles from "../../styles/globals.module.scss";
 import styles from "./Modal.module.scss";
 import Image from "next/Image";
 import gsap from "gsap";

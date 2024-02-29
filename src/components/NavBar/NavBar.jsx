@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/globals.module.scss";
+import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
   const Clock = () => {
