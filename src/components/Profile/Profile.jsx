@@ -91,11 +91,13 @@ const About = () => {
             page or email me now!
           </p>
           <div className={styles.button_container}>
-            <Button
-              className={styles.button}
-              label={`chris.dcoutts@gmail.com \u2198`}
-              // onClick={onClick}
-            />
+            <a className={styles.email} href="mailto:chris.dcoutts@gmail.com">
+              <Button
+                className={styles.button}
+                label={`chris.dcoutts@gmail.com \u2198`}
+                // onClick={onClick}
+              />
+            </a>
           </div>
         </section>
       </section>

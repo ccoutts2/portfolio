@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
 import Inner from "@/components/Inner/Inner";
+import GetInTouch from "@/components/GetInTouch/GetInTouch";
 
 export default function About() {
   return (
@@ -12,6 +13,7 @@ export default function About() {
       </Head>
       <Inner>
         <NavBar />
+        <GetInTouch />
       </Inner>
     </main>
   );

@@ -1,0 +1,41 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.container {
+  @include flex(column, space-evenly, flex-start);
+  height: 100vh;
+  padding-inline: 1rem;
+}
+
+.form {
+  @include flex(column, center, flex-start);
+}
+
+.form_col {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  border-top: 1px solid rgb(45, 45, 45);
+}
+
+.number {
+  display: inline;
+}
+
+.label {
+  transition: all 0.2s ease-in-out;
+}
+
+.activeLabel {
+  color: rgba(45, 45, 45, 0.4);
+}
+
+.input {
+  padding: 1rem;
+  background: transparent;
+  width: 100%;
+  border: none;
+}
