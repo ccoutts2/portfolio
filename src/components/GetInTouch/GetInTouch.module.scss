@@ -11,8 +11,30 @@
   padding-inline: 1rem;
 }
 
+.image_container {
+  max-width: 8rem;
+  max-height: 8rem;
+  text-align: start;
+}
+
+.heading {
+  font-weight: 400;
+}
+
+.contact_heading {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.email {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: black;
+}
+
 .form {
   @include flex(column, center, flex-start);
+  width: 100%;
 }
 
 .form_col {
@@ -21,12 +43,20 @@
   border-top: 1px solid rgb(45, 45, 45);
 }
 
+.label_header {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
 .number {
   display: inline;
+  font-size: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .label {
   transition: all 0.2s ease-in-out;
+  font-size: 0.8rem;
 }
 
 .activeLabel {
@@ -38,4 +68,5 @@
   background: transparent;
   width: 100%;
   border: none;
+  outline: none;
 }

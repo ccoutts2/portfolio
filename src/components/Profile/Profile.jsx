@@ -95,7 +95,6 @@ const About = () => {
               <Button
                 className={styles.button}
                 label={`chris.dcoutts@gmail.com \u2198`}
-                // onClick={onClick}
               />
             </a>
           </div>
