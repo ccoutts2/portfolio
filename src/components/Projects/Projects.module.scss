@@ -1,0 +1,98 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$primary-background: #cdcdcd;
+
+.project_container {
+  @include flex(row, space-between, center);
+  padding: 1rem 1rem;
+  width: 100%;
+  border-top: 1px solid rgb(57, 57, 57);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.project_container:hover {
+  opacity: 0.4;
+}
+
+.project_container:hover h3 {
+  transform: translateX(-5px);
+  transition: all 0.2s linear;
+  margin: 0;
+}
+
+.project_container:hover p {
+  transform: translateX(5px);
+  transition: all 0.2s linear;
+}
+
+.title {
+  font-weight: 400;
+}
+
+// .link {
+//   text-decoration: none;
+// }
+
+// .project {
+//   padding-top: 1rem;
+// }
+
+// .article {
+//   margin-top: 1rem;
+//   padding-top: 0.25rem;
+//   border-top: 2px solid black;
+//   height: 43vh;
+//   @include flex(row, space-between, stretch);
+// }
+
+// .text_container {
+//   width: 50%;
+//   @include flex(column, space-between, flex-start);
+// }
+
+// .text_title {
+//   font-weight: 400;
+//   color: black;
+// }
+
+// .text {
+//   font-size: 0.8rem;
+//   transition: all 0.2s linear;
+// }
+
+// .image_container {
+//   height: 100%;
+// }
+
+// .image {
+//   object-fit: contain;
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 1rem;
+//   background-color: $primary-background;
+// }
+
+// .tech_stack {
+//   @include flex(row, space-around, stretch);
+//   flex-wrap: wrap;
+//   width: 100%;
+//   gap: 0.25rem;
+// }
+
+// .tech {
+//   font-size: 0.8rem;
+//   border: 0.5px solid black;
+//   border-radius: 5px;
+//   color: black;
+//   width: 3.25rem;
+//   padding: 0.2rem;
+//   text-align: center;
+//   box-shadow: rgba(50, 50, 93, 0.8) 0px 6px 12px -2px,
+//     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+// }
