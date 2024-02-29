@@ -5,7 +5,8 @@
     "description": "Step into the map with your friends and discover pubs in your city. Triangulate makes planning fun.",
     "techStack": ["React", "Node", "Express", "Knex", "MySQL", "MapBox"],
     "imageSrc": "/images/triangulate-4.svg",
-    "link": "/projects/triangulate"
+    "link": "/projects/triangulate",
+    "color": "#8C8C8C"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "How might we enhance the experience of sending and receiving a gift for any occasion? 24 Hour Hackathon with UX Designers.",
     "techStack": ["React", "Scss"],
     "imageSrc": "/images/deliveroo-1.svg",
-    "link": "/projects/deliveroo"
+    "link": "/projects/deliveroo",
+    "color": "#706063"
   },
   {
     "id": 3,
@@ -21,6 +23,7 @@
     "description": "Enter Gollum's cave and answer all the riddles to leave with the ring...alive",
     "techStack": ["React", "Node", "Express", "Scss"],
     "imageSrc": "/images/gollum-1.svg",
-    "link": "/projects/gollum"
+    "link": "/projects/gollum",
+    "color": "black"
   }
 ]

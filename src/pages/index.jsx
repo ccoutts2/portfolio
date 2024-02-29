@@ -1,50 +1,40 @@
 import styles from "../styles/globals.module.scss";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
 import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
-import { motion } from "framer-motion";
 import Inner from "@/components/Inner/Inner";
 import Modal from "@/components/Modal/Modal";
 
 export default function Home() {
-  const projects = [
-    {
-      id: 1,
-      title: "Triangulate",
-      description:
-        "Step into the map with your friends and discover pubs in your city. Triangulate makes planning fun.",
-      techStack: ["React", "Node", "Express", "Knex", "MySQL", "MapBox"],
-      imageSrc: "/images/triangulate-4.svg",
-      link: "/projects/triangulate",
-      color: "black",
-    },
-    {
-      id: 2,
-      title: "Deliveroo",
-      description:
-        "How might we enhance the experience of sending and receiving a gift for any occasion? 24 Hour Hackathon with UX Designers.",
-      techStack: ["React", "Scss"],
-      imageSrc: "/images/deliveroo-1.svg",
-      link: "/projects/deliveroo",
-      color: "black",
-    },
-    {
-      id: 3,
-      title: "Gollum",
-      description:
-        "Enter Gollum's cave and answer all the riddles to leave with the ring...alive",
-      techStack: ["React", "Node", "Express", "Scss"],
-      imageSrc: "/images/gollum-1.svg",
-      link: "/projects/gollum",
-      color: "black",
-    },
-  ];
-
   const [modal, setModal] = useState({ active: false, index: 0 });
+  const [projects, setProjects] = useState(null);
+  const [isError, setIsError] = useState(false);
+
+  const fetchProjects = async () => {
+    try {
+      const { data } = await axios.get("/data/projects.json");
+      setProjects(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  if (!projects) {
+    return null;
+  }
+
+  if (isError) {
+    return <p>There's something wrong, contact me</p>;
+  }
 
   return (
     <main className={styles.globals}>
@@ -69,10 +59,8 @@ export default function Home() {
               );
             })}
           </div>
-
           <Modal modal={modal} projects={projects} />
         </div>
-
         <Contact />
       </Inner>
     </main>

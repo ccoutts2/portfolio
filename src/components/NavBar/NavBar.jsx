@@ -4,21 +4,26 @@ import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
   const Clock = () => {
-    const d = new Date();
-    const [currentTime, setCurrentTime] = useState("");
+    const [currentTime, setCurrentTime] = useState(getFormattedTime());
 
     useEffect(() => {
-      const date =
-        "GMT " + d.getHours() + " : " + d.getMinutes().toString().padStart(2, "0");
       const timer = setInterval(() => {
-        setCurrentTime(date);
+        setCurrentTime(getFormattedTime());
       }, 1000);
 
       return () => clearInterval(timer);
-    }, [currentTime]);
+    }, []);
+
+    function getFormattedTime() {
+      const d = new Date();
+      return (
+        "GMT " + d.getHours() + " : " + d.getMinutes().toString().padStart(2, "0")
+      );
+    }
 
     return <>{currentTime}</>;
   };
+
   return (
     <header className={styles.nav}>
       <div className={styles.title_container}>
@@ -32,7 +37,7 @@ const NavBar = () => {
           <Link href="/about" className={styles.links}>
             <li className={styles.link}>About</li>
           </Link>
-          <Link href="#" className={styles.links}>
+          <Link href="/contact" className={styles.links}>
             {" "}
             <li className={styles.link}>Contact</li>
           </Link>

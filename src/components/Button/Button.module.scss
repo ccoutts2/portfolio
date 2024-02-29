@@ -1,4 +1,17 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.container {
+  @include flex(column, center, center);
+  position: relative;
+}
+
 .button {
+  margin-top: 1rem;
   padding: 0.25rem 1rem;
   font-size: 0.8rem;
   color: black;
@@ -6,8 +19,17 @@
   border-radius: 2rem;
   cursor: pointer;
   background-color: #cdcdcd;
+  transition: 0.3s cubic-bezier(0.5, 0, 0, 1);
+  transform: translateY(0%) rotate(0.001deg);
+  transform-origin: top right;
+  position: relative;
+}
+
+.button {
+  position: relative;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: black;
+  color: white;
 }

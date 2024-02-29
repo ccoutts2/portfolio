@@ -3,9 +3,11 @@ import styles from "./Button.module.scss";
 
 const Button = ({ label, onClick }) => {
   return (
-    <button onClick={onClick} className={styles.button}>
-      {label}
-    </button>
+    <div className={styles.container}>
+      <button onClick={onClick} className={styles.button}>
+        {label}
+      </button>
+    </div>
   );
 };
 
