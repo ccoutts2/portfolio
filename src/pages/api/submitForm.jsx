@@ -6,6 +6,6 @@ export default function handler(req, res) {
 
     res.status(200).json({ message: "Form submitted successfully" });
   } else {
-    res.status(500).json({ message: "Could not submit form" });
+    res.status(400).json({ message: "Bad request" });
   }
 }

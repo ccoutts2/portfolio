@@ -7,14 +7,22 @@
 
 .container {
   @include flex(column, space-evenly, flex-start);
-  height: 100vh;
   padding-inline: 1rem;
 }
 
-.image_container {
-  max-width: 8rem;
-  max-height: 8rem;
-  text-align: start;
+.top_section {
+  padding-top: 1rem;
+  width: 100%;
+  @include flex(row, flex-start, stretch);
+  gap: 0.5rem;
+}
+
+.heading_container {
+  @include flex(column, space-between, flex-start);
+}
+
+.image {
+  object-fit: cover;
 }
 
 .heading {
@@ -24,6 +32,8 @@
 .contact_heading {
   font-weight: 400;
   font-size: 0.8rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
 }
 
 .email {
@@ -35,6 +45,7 @@
 .form {
   @include flex(column, center, flex-start);
   width: 100%;
+  padding-top: 1rem;
 }
 
 .form_col {
@@ -69,4 +80,16 @@
   width: 100%;
   border: none;
   outline: none;
+}
+
+.button_container {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+}
+
+.button_confirm {
+  background-image: url("../../assets/icons/likes.svg");
 }

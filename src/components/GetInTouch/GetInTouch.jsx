@@ -1,7 +1,7 @@
 import styles from "./GetInTouch.module.scss";
-import React, { useState } from "react";
-// import chris from "../../assets/images/chris-profile.svg";
-// import Image from "next/Image";
+import React, { useState, useRef } from "react";
+import chris from "../../assets/images/chris-pic.jpg";
+import Image from "next/Image";
 import Button from "../Button/Button";
 import axios from "axios";
 
@@ -14,6 +14,7 @@ const GetInTouch = () => {
     textarea: "",
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const formRef = useRef(null);
 
   const onChange = (e) => {
     setFormFields({
@@ -51,8 +52,20 @@ const GetInTouch = () => {
     return true;
   };
 
+  const isMessageValid = () => {
+    if (!formFields.textarea.length) {
+      return false;
+    }
+    return true;
+  };
+
   const isFormValid = () => {
-    if (!isNameValid() || !isEmailValid() || !isServicesValid()) {
+    if (
+      !isNameValid() ||
+      !isEmailValid() ||
+      !isServicesValid() ||
+      !isMessageValid()
+    ) {
       return false;
     }
     return true;
@@ -71,7 +84,15 @@ const GetInTouch = () => {
     if (isFormValid()) {
       await axios.post("/api/submitForm", newMessage);
       setFormSubmitted(true);
+      formRef.current.reset();
     }
+
+    setFormFields({
+      name: "",
+      email: "",
+      services: "",
+      textarea: "",
+    });
 
     console.log("Form submitted!");
   };
@@ -83,19 +104,36 @@ const GetInTouch = () => {
   const handleInputBlur = () => {
     setActiveLabel(null);
   };
+
+  const noName = () => {
+    if (formSubmitted && !formFields.name.length) {
+      return <p>Please enter a name</p>;
+    }
+    return null;
+  };
+
+  const noEmail = () => {
+    if (formSubmitted && !formFields.email.length) {
+      return <p>Please enter an email</p>;
+    }
+    return null;
+  };
+
   return (
-    <div className={styles.container}>
-      {/* <div className={styles.image_container}>
+    <main className={styles.container}>
+      <section className={styles.top_section}>
         <Image
           className={styles.image}
           src={chris}
           alt="profile picture of me"
-          width={200}
-          height={200}
+          width={100}
+          height={120}
         />
-      </div> */}
-      <h1 className={styles.heading}>Contact me</h1>
-      <h2 className={styles.heading}>Let's work together</h2>
+        <div className={styles.heading_container}>
+          <h1 className={styles.heading}>Contact me</h1>
+          <h2 className={styles.heading}>Let's work together</h2>
+        </div>
+      </section>
       <div>
         <h3 className={styles.contact_heading}>contact details</h3>
         <a className={styles.email} href="mailto:chris.dcoutts@gmail.com">
@@ -105,7 +143,7 @@ const GetInTouch = () => {
           />
         </a>
       </div>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
             <h4 className={styles.number}>01</h4>
@@ -122,9 +160,11 @@ const GetInTouch = () => {
             className={styles.input}
             id="name"
             name="name"
+            type="text"
             placeholder="Joe Smith*"
             onFocus={() => handleInputFocus("name")}
             onBlur={handleInputBlur}></input>
+          <p>{noName()}</p>
         </div>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
@@ -140,11 +180,13 @@ const GetInTouch = () => {
           <input
             onChange={onChange}
             className={styles.input}
+            type="email"
             id="email"
             name="email"
             placeholder="joe@smith.com*"
             onFocus={() => handleInputFocus("email")}
             onBlur={handleInputBlur}></input>
+          <p>{noEmail()}</p>
         </div>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
@@ -160,9 +202,10 @@ const GetInTouch = () => {
           <input
             onChange={onChange}
             className={styles.input}
+            type="text"
             id="services"
             name="services"
-            placeholder="Perm/Contract/Want to get to know me?"
+            placeholder="CV/Work/Want to get to know me?"
             onFocus={() => handleInputFocus("services")}
             onBlur={handleInputBlur}></input>
         </div>
@@ -179,6 +222,7 @@ const GetInTouch = () => {
           </div>
           <textarea
             onChange={onChange}
+            type="text"
             id="textarea"
             name="textarea"
             className={styles.input}
@@ -186,9 +230,16 @@ const GetInTouch = () => {
             onFocus={() => handleInputFocus("textarea")}
             onBlur={handleInputBlur}></textarea>
         </div>
-        <Button className={styles.button} label={"Send"} />
+        <div className={styles.button_container}>
+          <Button
+            className={`${styles.button} ${
+              formSubmitted ? styles.button_confirm : ""
+            }`}
+            label={"Send"}
+          />
+        </div>
       </form>
-    </div>
+    </main>
   );
 };
 
