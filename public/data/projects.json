@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Triangulate",
+    "title": "triangulate",
     "description": "Step into the map with your friends and discover pubs in your city. Triangulate makes planning fun.",
     "techStack": ["React", "Node", "Express", "Knex", "MySQL", "MapBox"],
     "imageSrc": "/images/triangulate-4.svg",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "title": "Deliveroo",
+    "title": "deliveroo",
     "description": "How might we enhance the experience of sending and receiving a gift for any occasion? 24 Hour Hackathon with UX Designers.",
     "techStack": ["React", "Scss"],
     "imageSrc": "/images/deliveroo-1.svg",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "title": "Gollum",
+    "title": "gollum's cave",
     "description": "Enter Gollum's cave and answer all the riddles to leave with the ring...alive",
     "techStack": ["React", "Node", "Express", "Scss"],
     "imageSrc": "/images/gollum-1.svg",

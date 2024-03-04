@@ -7,6 +7,12 @@
 
 $primary-background: #cdcdcd;
 
+.link {
+  text-decoration: none;
+  width: 100%;
+  color: black;
+}
+
 .project_container {
   @include flex(row, space-between, center);
   padding: 1rem 1rem;
@@ -33,4 +39,5 @@ $primary-background: #cdcdcd;
 
 .title {
   font-weight: 400;
+  text-transform: capitalize;
 }
