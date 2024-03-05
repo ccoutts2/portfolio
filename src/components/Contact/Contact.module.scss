@@ -5,6 +5,8 @@
   align-items: $align;
 }
 
+$primary-background: #cdcdcd;
+
 .contact {
   padding-top: 1rem;
 }
@@ -12,30 +14,22 @@
 .contact_section {
   padding-top: 1rem;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  @include flex(row, flex-start, baseline);
+  @include flex(row, flex-start, flex-end);
 }
 
 .contact_email {
   padding-left: 1rem;
-  width: 60%;
+  width: 70%;
 }
 
-.contact_details {
-  gap: 1rem;
-  height: 5rem;
-  padding-right: 1rem;
-  height: 3rem;
-  width: 3rem;
-}
-
-.contact_text {
+.contact_button {
   font-size: 0.7rem;
   text-decoration: none;
+  @include flex(row, flex-start, stretch);
 }
 
-.contact_image {
-  object-fit: contain;
-  height: 1.5rem;
-  width: 1.5rem;
+.image {
+  background-color: $primary-background;
+  object-fit: cover;
+  rotate: 90deg;
 }

@@ -70,9 +70,6 @@ export default function Triangulate() {
                   target="_blank">
                   <Button label={`GitHub \u2198`} />
                 </Link>
-                <Link className={styles.link} href="/" target="_blank">
-                  <Button label={`Website \u2198`} />
-                </Link>
               </div>
             </section>
           </div>

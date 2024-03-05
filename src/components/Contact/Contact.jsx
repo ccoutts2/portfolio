@@ -1,41 +1,29 @@
-import Link from "next/link";
 import React from "react";
+import Image from "next/Image";
 import styles from "./Contact.module.scss";
 import Button from "../Button/Button";
-import Image from "next/Image";
-import GitHub from "../../assets/logos/github-mark.svg";
-import LinkedIn from "../../assets/logos/linkedin.svg";
+import chris from "../../assets/images/chris-smart3.svg";
 
 const Contact = () => {
   return (
     <main className={styles.contact}>
       <section className={styles.contact_section}>
+        <div className={styles.image_container}>
+          <Image
+            className={styles.image}
+            src={chris}
+            alt="profile picture of me"
+            width={110}
+            height={95}
+          />
+        </div>
         <div className={styles.contact_email}>
-          {/* <h3 className={styles.contacts}>Email</h3> */}
-          <a className={styles.contact_text} href="mailto:chris.dcoutts@gmail.com">
+          <a className={styles.contact_button} href="mailto:chris.dcoutts@gmail.com">
             <Button
               className={styles.button}
               label={`chris.dcoutts@gmail.com \u2198`}
             />
           </a>
-        </div>
-        <div className={styles.contact_details}>
-          {/* <h3 className={styles.contacts}>LinkedIn</h3> */}
-          <Link href="https://www.linkedin.com/in/chris-coutts/" target="_blank">
-            <Image
-              className={styles.contact_image}
-              src={LinkedIn}
-              alt="linkedin logo"></Image>
-          </Link>
-        </div>
-        <div className={styles.contact_details}>
-          {/* <h3 className={styles.contacts}>GitHub</h3> */}
-          <Link target="_blank" href="https://github.com/ccoutts2/">
-            <Image
-              className={styles.contact_image}
-              src={GitHub}
-              alt="githuub logo"></Image>
-          </Link>
         </div>
       </section>
     </main>
