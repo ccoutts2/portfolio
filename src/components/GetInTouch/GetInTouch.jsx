@@ -183,7 +183,7 @@ const GetInTouch = () => {
             type="email"
             id="email"
             name="email"
-            placeholder="joe@smith.com*"
+            placeholder="joe.smith@email.com*"
             onFocus={() => handleInputFocus("email")}
             onBlur={handleInputBlur}></input>
           <p>{noEmail()}</p>

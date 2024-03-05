@@ -1,7 +1,7 @@
 import globalStyles from "../../styles/globals.module.scss";
 import navBarStyles from "../../components/NavBar/NavBar.module.scss";
 import styles from "./index.module.scss";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
@@ -10,36 +10,11 @@ import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import Button from "@/components/Button/Button";
 import Image from "next/Image";
-import { useTransform, useScroll, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
-import useDimension from "@/hooks/useDimension";
 
 export default function Triangulate() {
   const [techStack, setTechStack] = useState(null);
-
-  const images = [
-    "triangulate-2.svg",
-    "triangulate-12.svg",
-    "triangulate-4.svg",
-    "triangulate-5.svg",
-    "triangulate-6.svg",
-    "triangulate-7.svg",
-    "triangulate-8.svg",
-    "triangulate-9.svg",
-    "triangulate-10.svg",
-    "triangulate-11.svg",
-  ];
-
-  const container = useRef(null);
-  const { height } = useDimension();
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2.5]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.7]);
 
   const fetchTechStack = async () => {
     try {
@@ -78,7 +53,7 @@ export default function Triangulate() {
         <NavBar />
         <section className={styles.main}>
           <div className={styles.content}>
-            <h1 className={styles.heading}>/ triangulate</h1>
+            <h1 className={styles.heading}>/ gollum's cave</h1>
             <section className={styles.info_container}>
               <div className={styles.info}>
                 <h3 className={styles.header}>year</h3>
@@ -102,19 +77,21 @@ export default function Triangulate() {
             </section>
           </div>
           <div className={styles.spacer}></div>
-          <article ref={container} className={styles.gallery}>
-            <Column images={[images[0], images[1], images[2]]} y={y} />
-            <Column images={[images[3], images[4], images[5]]} y={y2} />
-            <Column images={[images[6], images[7], images[8]]} y={y3} />
-          </article>
+
+          <div className={styles.video_container}>
+            <video controls={false} autoPlay loop muted className={styles.video}>
+              <source src="/videos/gollum.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div className={styles.spacer}></div>
           <section className={styles.about}>
             <p>
-              Meet up effortlessly with your friends. Triangulate let's you step into
-              the map where you can discover the nearest and best pubs to you.
+              Enter Gollum's cave and answer all the riddles to leave with the
+              ring...alive. 24 Hour Pair Programming Hackathon
             </p>
             <article className={styles.card}>
-              {techStack[0].techStack.map((tech, index) => (
+              {techStack[2].techStack.map((tech, index) => (
                 <div key={index} className={styles.tech_item}>
                   {tech}
                 </div>
@@ -127,17 +104,3 @@ export default function Triangulate() {
     </main>
   );
 }
-
-const Column = ({ images, y = 0 }) => {
-  return (
-    <motion.div style={{ y }} className={styles.column}>
-      {images.map((src, index) => {
-        return (
-          <div key={index} className={styles.image_container}>
-            <Image src={`/images/${src}`} fill alt="project image"></Image>
-          </div>
-        );
-      })}
-    </motion.div>
-  );
-};

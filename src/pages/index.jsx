@@ -7,8 +7,10 @@ import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 import Inner from "@/components/Inner/Inner";
 import Modal from "@/components/Modal/Modal";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
   const [modal, setModal] = useState({ active: false, index: 0 });
@@ -26,6 +28,17 @@ export default function Home() {
 
   useEffect(() => {
     fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   }, []);
 
   if (!projects) {
@@ -62,6 +75,7 @@ export default function Home() {
           <Modal modal={modal} projects={projects} />
         </div>
         <Contact />
+        <Footer />
       </Inner>
     </main>
   );

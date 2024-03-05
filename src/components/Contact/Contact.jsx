@@ -12,7 +12,12 @@ const Contact = () => {
       <section className={styles.contact_section}>
         <div className={styles.contact_email}>
           {/* <h3 className={styles.contacts}>Email</h3> */}
-          <p className={styles.contact_text}>chris.dcoutts@gmail.com</p>
+          <a className={styles.contact_text} href="mailto:chris.dcoutts@gmail.com">
+            <Button
+              className={styles.button}
+              label={`chris.dcoutts@gmail.com \u2198`}
+            />
+          </a>
         </div>
         <div className={styles.contact_details}>
           {/* <h3 className={styles.contacts}>LinkedIn</h3> */}

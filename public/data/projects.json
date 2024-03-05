@@ -3,7 +3,16 @@
     "id": 1,
     "title": "triangulate",
     "description": "Step into the map with your friends and discover pubs in your city. Triangulate makes planning fun.",
-    "techStack": ["React", "Node", "Express", "Knex", "MySQL", "MapBox"],
+    "techStack": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Knex.js",
+      "MySQL",
+      "MapBox",
+      "Figma",
+      "Scss"
+    ],
     "imageSrc": "/images/triangulate-4.svg",
     "link": "/projects/triangulate",
     "color": "#8C8C8C"
@@ -12,16 +21,16 @@
     "id": 2,
     "title": "deliveroo",
     "description": "How might we enhance the experience of sending and receiving a gift for any occasion? 24 Hour Hackathon with UX Designers.",
-    "techStack": ["React", "Scss"],
+    "techStack": ["React.js", "Scss"],
     "imageSrc": "/images/deliveroo-1.svg",
     "link": "/projects/deliveroo",
     "color": "#706063"
   },
   {
     "id": 3,
-    "title": "gollum's cave",
+    "title": "gollums-cave",
     "description": "Enter Gollum's cave and answer all the riddles to leave with the ring...alive",
-    "techStack": ["React", "Node", "Express", "Scss"],
+    "techStack": ["React.js", "Node.js", "Express.js", "Scss"],
     "imageSrc": "/images/gollum-1.svg",
     "link": "/projects/gollum",
     "color": "black"

@@ -1,11 +1,8 @@
-"use client";
-import React from "react";
 import styles from "./Profile.module.scss";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "../Button/Button";
 import Link from "next/link";
-
 const About = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -71,7 +68,7 @@ const About = () => {
           </p>
           <p className={styles.text}>
             However, in my free time I enjoy playing video games, watching my
-            favourite dev YouTubers, going to the gym or cooking up a storm in the
+            favourite dev YouTubers, going to the gym, or cooking up a storm in the
             kithen
           </p>
         </section>
@@ -99,39 +96,6 @@ const About = () => {
             </a>
           </div>
         </section>
-      </section>
-
-      <section className={styles.links}>
-        <div className={styles.links_container}>
-          <h4 className={styles.container_header}>Sitemap</h4>
-          <Link href="/" className={styles.nav_link}>
-            <h5 className={styles.container_text}>home</h5>
-          </Link>
-          <Link href="/about" className={styles.nav_link}>
-            <h5 className={styles.container_text}>about</h5>
-          </Link>
-          <Link href="/contact" className={styles.nav_link}>
-            <h5 className={styles.container_text}>contact</h5>
-          </Link>
-        </div>
-        <div className={styles.links_container}>
-          <h4 className={styles.container_header}>Let's connect</h4>
-          <Link
-            href="https://www.linkedin.com/in/chris-coutts/"
-            target="_blank"
-            className={styles.nav_link}>
-            <h5 className={styles.container_text}>linkedin</h5>
-          </Link>
-          <Link
-            target="_blank"
-            href="https://github.com/ccoutts2/"
-            className={styles.nav_link}>
-            <h5 className={styles.container_text}>github</h5>
-          </Link>
-          <Link href="/" className={styles.nav_link}>
-            <h5 className={styles.container_text}>instagram</h5>
-          </Link>
-        </div>
       </section>
     </main>
   );

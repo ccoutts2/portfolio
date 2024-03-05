@@ -9,7 +9,7 @@
   padding-inline: 1rem;
   overflow: hidden;
   position: relative;
-  height: 180vh;
+  height: 145vh;
 }
 
 .title {
@@ -19,7 +19,7 @@
 
 .slider_container {
   position: absolute;
-  bottom: calc(180vh - 8rem);
+  bottom: calc(145vh - 8rem);
 }
 
 .slider {
@@ -52,34 +52,6 @@
 }
 
 .link {
-  text-decoration: none;
-  color: black;
-}
-
-.links {
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  @include flex(row, flex-start, stretch);
-}
-
-.links_container {
-  @include flex(column, center, flex-start);
-  width: 50%;
-  gap: 0.5rem;
-  text-transform: uppercase;
-}
-
-.container_header {
-  font-weight: 400;
-}
-
-.container_text {
-  font-weight: 400;
-}
-
-.nav_link {
   text-decoration: none;
   color: black;
 }

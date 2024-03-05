@@ -18,16 +18,12 @@ export default function Triangulate() {
   const [techStack, setTechStack] = useState(null);
 
   const images = [
-    "triangulate-2.svg",
-    "triangulate-12.svg",
-    "triangulate-4.svg",
-    "triangulate-5.svg",
-    "triangulate-6.svg",
-    "triangulate-7.svg",
-    "triangulate-8.svg",
-    "triangulate-9.svg",
-    "triangulate-10.svg",
-    "triangulate-11.svg",
+    "deliveroo-1.svg",
+    "deliveroo-2.svg",
+    "deliveroo-3.svg",
+    "deliveroo-4.svg",
+    "deliveroo-5.svg",
+    "deliveroo-6.svg",
   ];
 
   const container = useRef(null);
@@ -78,7 +74,7 @@ export default function Triangulate() {
         <NavBar />
         <section className={styles.main}>
           <div className={styles.content}>
-            <h1 className={styles.heading}>/ triangulate</h1>
+            <h1 className={styles.heading}>/ deliveroo</h1>
             <section className={styles.info_container}>
               <div className={styles.info}>
                 <h3 className={styles.header}>year</h3>
@@ -86,7 +82,7 @@ export default function Triangulate() {
               </div>
               <div className={styles.info}>
                 <h3 className={styles.header}>role</h3>
-                <p>Design and Development</p>
+                <p>Development</p>
               </div>
               <div className={styles.button_container}>
                 <Link
@@ -95,26 +91,23 @@ export default function Triangulate() {
                   target="_blank">
                   <Button label={`GitHub \u2198`} />
                 </Link>
-                <Link className={styles.link} href="/" target="_blank">
-                  <Button label={`Website \u2198`} />
-                </Link>
               </div>
             </section>
           </div>
           <div className={styles.spacer}></div>
           <article ref={container} className={styles.gallery}>
-            <Column images={[images[0], images[1], images[2]]} y={y} />
-            <Column images={[images[3], images[4], images[5]]} y={y2} />
-            <Column images={[images[6], images[7], images[8]]} y={y3} />
+            <Column images={[images[2], images[3]]} y={y} />
+            <Column images={[images[0], images[4]]} y={y2} />
+            <Column images={[images[1], images[5]]} y={y3} />
           </article>
           <div className={styles.spacer}></div>
           <section className={styles.about}>
             <p>
-              Meet up effortlessly with your friends. Triangulate let's you step into
-              the map where you can discover the nearest and best pubs to you.
+              Building a better experience of sending and receiving a gift for any
+              occasion. 24 Hour Hackathon with UX Designers
             </p>
             <article className={styles.card}>
-              {techStack[0].techStack.map((tech, index) => (
+              {techStack[1].techStack.map((tech, index) => (
                 <div key={index} className={styles.tech_item}>
                   {tech}
                 </div>
