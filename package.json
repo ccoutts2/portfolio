@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.1",
     "@studio-freight/lenis": "^1.0.39",
     "axios": "^1.6.7",
     "framer-motion": "^11.0.6",

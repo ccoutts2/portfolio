@@ -4,6 +4,7 @@ import chris from "../../assets/images/chris-pic2.svg";
 import Image from "next/Image";
 import Button from "../Button/Button";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
 
 const GetInTouch = () => {
   const [activeLabel, setActiveLabel] = useState(null);
@@ -14,7 +15,29 @@ const GetInTouch = () => {
     textarea: "",
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const formRef = useRef(null);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   const onChange = (e) => {
     setFormFields({
@@ -71,31 +94,31 @@ const GetInTouch = () => {
     return true;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    const newMessage = {
-      name: formFields.name,
-      email: formFields.email,
-      services: formFields.services,
-      textarea: formFields.textarea,
-    };
+  //   const newMessage = {
+  //     name: formFields.name,
+  //     email: formFields.email,
+  //     services: formFields.services,
+  //     textarea: formFields.textarea,
+  //   };
 
-    if (isFormValid()) {
-      await axios.post("/api/submitForm", newMessage);
-      setFormSubmitted(true);
-      formRef.current.reset();
-    }
+  //   if (isFormValid()) {
+  //     await axios.post("/api/submitForm", newMessage);
+  //     setFormSubmitted(true);
+  //     formRef.current.reset();
+  //   }
 
-    setFormFields({
-      name: "",
-      email: "",
-      services: "",
-      textarea: "",
-    });
+  //   setFormFields({
+  //     name: "",
+  //     email: "",
+  //     services: "",
+  //     textarea: "",
+  //   });
 
-    console.log("Form submitted!");
-  };
+  //   console.log("Form submitted!");
+  // };
 
   const handleInputFocus = (labelFor) => {
     setActiveLabel(labelFor);
@@ -105,19 +128,19 @@ const GetInTouch = () => {
     setActiveLabel(null);
   };
 
-  const noName = () => {
-    if (formSubmitted && !formFields.name.length) {
-      return <p>Please enter a name</p>;
-    }
-    return null;
-  };
+  // const noName = () => {
+  //   if (formSubmitted && !formFields.name.length) {
+  //     return <p>Please enter a name</p>;
+  //   }
+  //   return null;
+  // };
 
-  const noEmail = () => {
-    if (formSubmitted && !formFields.email.length) {
-      return <p>Please enter an email</p>;
-    }
-    return null;
-  };
+  // const noEmail = () => {
+  //   if (formSubmitted && !formFields.email.length) {
+  //     return <p>Please enter an email</p>;
+  //   }
+  //   return null;
+  // };
 
   return (
     <main className={styles.container}>
@@ -143,7 +166,7 @@ const GetInTouch = () => {
           />
         </a>
       </div>
-      <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
+      <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
             <h4 className={styles.number}>01</h4>
@@ -164,7 +187,6 @@ const GetInTouch = () => {
             placeholder="Joe Smith*"
             onFocus={() => handleInputFocus("name")}
             onBlur={handleInputBlur}></input>
-          <p>{noName()}</p>
         </div>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
@@ -186,7 +208,7 @@ const GetInTouch = () => {
             placeholder="joe.smith@email.com*"
             onFocus={() => handleInputFocus("email")}
             onBlur={handleInputBlur}></input>
-          <p>{noEmail()}</p>
+          {/* <p>{noEmail()}</p> */}
         </div>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
@@ -236,6 +258,7 @@ const GetInTouch = () => {
               formSubmitted ? styles.button_confirm : ""
             }`}
             label={"Send"}
+            value="Send"
           />
         </div>
       </form>
