@@ -19,7 +19,7 @@
 
 .slider_container {
   position: absolute;
-  bottom: calc(145vh - 8rem);
+  bottom: calc(145vh - 9rem);
 }
 
 .slider {
@@ -29,9 +29,10 @@
 }
 
 .slider h2 {
+  position: relative;
   margin: 0.5rem;
-  font-size: 2rem;
-  padding-right: 0.25rem;
+  font-size: 4rem;
+  padding-right: 2.5rem;
 }
 
 .slider h2:nth-of-type(2) {

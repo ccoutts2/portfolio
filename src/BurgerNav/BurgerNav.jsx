@@ -1,7 +1,6 @@
 import styles from "./BurgerNav.module.scss";
 import React from "react";
 import { Links, FooterLinks } from "./data";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const perspective = {
@@ -59,7 +58,7 @@ const BurgerNav = () => {
                 animate="enter"
                 exit="exit"
                 initial="initial">
-                <Link href={link.href}>{link.title}</Link>
+                <a href={link.href}>{link.title}</a>
               </motion.div>
             </div>
           );
@@ -70,6 +69,7 @@ const BurgerNav = () => {
         {FooterLinks.map((link, i) => {
           return (
             <motion.a
+              target="_blank"
               key={`f_${i}`}
               href={link.href}
               custom={i}

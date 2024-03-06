@@ -46,11 +46,12 @@
 .menu_header {
   position: fixed;
   right: 0;
-  top: 6.65rem;
+  z-index: 1000;
+  top: 10rem;
 
   .menu {
-    width: 10rem;
-    height: 20rem;
+    width: 400px;
+    height: 600px;
     left: 0;
     background-color: #e5d4e6;
     border-radius: 1.5rem;

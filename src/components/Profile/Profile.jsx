@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import Button from "../Button/Button";
 import Link from "next/link";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 const About = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -43,6 +45,18 @@ const About = () => {
   };
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: 0,
+        end: window.innerHeight,
+        scrub: 0.25,
+        onUpdate: (e) => (direction = e.direction = -1),
+      },
+      x: "-300px",
+    });
     if (firstText.current && secondText.current) {
       gsap.set(secondText.current, {
         left: secondText.current.getBoundingClientRect().width,
@@ -66,7 +80,7 @@ const About = () => {
       </div>
 
       <section className={styles.text_section}>
-        <p>I'm a full stack develoMotionPathHelper.per based in London</p>
+        <p>I'm a full stack developer based in London</p>
         <p className={styles.text}>
           I come from a varied background having initially studied chemical
           engineering, before moving into a Product Manager role and then finally
