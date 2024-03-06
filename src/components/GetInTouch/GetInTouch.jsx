@@ -17,28 +17,6 @@ const GetInTouch = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        form.current,
-        {
-          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-        }
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
-
   const onChange = (e) => {
     setFormFields({
       ...formFields,
@@ -92,6 +70,32 @@ const GetInTouch = () => {
       return false;
     }
     return true;
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (isFormValid()) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_SERVICE_ID,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID,
+          form.current,
+          {
+            publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+          }
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setFormSubmitted(true);
+            window.location.reload();
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    }
   };
 
   // const handleSubmit = async (e) => {
@@ -257,8 +261,7 @@ const GetInTouch = () => {
             className={`${styles.button} ${
               formSubmitted ? styles.button_confirm : ""
             }`}
-            label={"Send"}
-            value="Send"
+            label={formSubmitted ? "Sent" : "Send"}
           />
         </div>
       </form>

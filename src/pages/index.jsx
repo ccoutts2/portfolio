@@ -11,8 +11,11 @@ import Footer from "@/components/Footer/Footer";
 import Inner from "@/components/Inner/Inner";
 import Modal from "@/components/Modal/Modal";
 import Lenis from "@studio-freight/lenis";
+import PreLoader from "@/components/PreLoader/PreLoader";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
   const [modal, setModal] = useState({ active: false, index: 0 });
   const [projects, setProjects] = useState(null);
   const [isError, setIsError] = useState(false);
@@ -39,6 +42,10 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3500);
   }, []);
 
   if (!projects) {
@@ -54,6 +61,7 @@ export default function Home() {
       <Head>
         <title>Chris | Full Stack Dev</title>
       </Head>
+      <AnimatePresence mode="wait">{isLoading && <PreLoader />}</AnimatePresence>
       <Inner>
         <NavBar />
         <Hero />

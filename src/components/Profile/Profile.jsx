@@ -45,10 +45,7 @@ const About = () => {
           <h2 ref={secondText}>Full Stack Developer -</h2>
         </div>
       </div>
-      {/* <div className={styles.image_container}>
-        {" "}
-        <Image src={chris} alt="profile picture of me" className={styles.image} />
-      </div> */}
+
       <section className={styles.text_section}>
         <p>I'm a full stack developer based in London</p>
         <p className={styles.text}>
@@ -63,13 +60,13 @@ const About = () => {
         </p>
         <section>
           <p className={styles.text}>
-            As I'm looking to break into the tech world, you'll find behind the
+            As I'm looking to break into the tech world, you'll find me behind the
             laptop screen developing my knowledge and skillset
           </p>
           <p className={styles.text}>
             However, in my free time I enjoy playing video games, watching my
             favourite dev YouTubers, going to the gym, or cooking up a storm in the
-            kithen
+            kitchen
           </p>
         </section>
         <section className={styles.text}>

@@ -9,7 +9,6 @@
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
   @include flex(row, flex-start, stretch);
 }
 
@@ -17,15 +16,17 @@
   @include flex(column, center, flex-start);
   width: 50%;
   gap: 0.5rem;
-  text-transform: uppercase;
 }
 
 .container_header {
   font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: capitalize;
 }
 
 .container_text {
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .nav_link {
@@ -33,6 +34,7 @@
   color: black;
 }
 
-.email {
-  text-decoration: none;
+.footer_message {
+  padding: 1rem;
+  font-size: 0.9rem;
 }
