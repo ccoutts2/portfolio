@@ -42,3 +42,17 @@
   text-decoration: none;
   color: black;
 }
+
+.menu_header {
+  position: fixed;
+  right: 0;
+  top: 6.65rem;
+
+  .menu {
+    width: 10rem;
+    height: 20rem;
+    left: 0;
+    background-color: #e5d4e6;
+    border-radius: 1.5rem;
+  }
+}

@@ -1,5 +1,6 @@
 import styles from "./Profile.module.scss";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import Button from "../Button/Button";
 import Link from "next/link";
@@ -7,6 +8,20 @@ const About = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
+
+  const textAnimate = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const staggerDuration = 0.2;
 
   let xPercent = 0;
   let direction = -1;
@@ -37,7 +52,11 @@ const About = () => {
   }, []);
 
   return (
-    <main className={styles.profile}>
+    <motion.main
+      variants={textAnimate}
+      initial="hidden"
+      animate="visible"
+      className={styles.profile}>
       <h1 className={styles.title}>/ about</h1>
       <div className={styles.slider_container}>
         <div ref={slider} className={styles.slider}>
@@ -47,7 +66,7 @@ const About = () => {
       </div>
 
       <section className={styles.text_section}>
-        <p>I'm a full stack developer based in London</p>
+        <p>I'm a full stack develoMotionPathHelper.per based in London</p>
         <p className={styles.text}>
           I come from a varied background having initially studied chemical
           engineering, before moving into a Product Manager role and then finally
@@ -94,7 +113,7 @@ const About = () => {
           </div>
         </section>
       </section>
-    </main>
+    </motion.main>
   );
 };
 

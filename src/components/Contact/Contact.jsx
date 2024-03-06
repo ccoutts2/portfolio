@@ -3,10 +3,27 @@ import Image from "next/Image";
 import styles from "./Contact.module.scss";
 import Button from "../Button/Button";
 import chris from "../../assets/images/chris-smart3.svg";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const textAnimate = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <main className={styles.contact}>
+    <motion.main
+      variants={textAnimate}
+      initial="hidden"
+      animate="visible"
+      className={styles.contact}>
       <section className={styles.contact_section}>
         <div className={styles.image_container}>
           <Image
@@ -26,7 +43,7 @@ const Contact = () => {
           </a>
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 };
 

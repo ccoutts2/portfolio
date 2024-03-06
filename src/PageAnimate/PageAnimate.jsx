@@ -1,0 +1,20 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+const PageAnimate = ({ children }) => {
+  const contentAnimate = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  return <motion.div {...contentAnimate}>{children}</motion.div>;
+};
+
+export default PageAnimate;

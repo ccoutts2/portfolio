@@ -7,11 +7,6 @@ $primary-background: #cdcdcd;
   align-items: $align;
 }
 
-.container {
-  @include flex(column, center, flex-end);
-  position: relative;
-}
-
 .button {
   margin-top: 0.5rem;
   padding: 0.25rem 1rem;
