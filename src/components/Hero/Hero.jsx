@@ -10,7 +10,6 @@ const Hero = () => {
     try {
       const { data } = await axios.get("/data/images.json");
       setImages(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }

@@ -100,8 +100,6 @@ const GetInTouch = () => {
     setActiveLabel(null);
   };
 
-  console.log(isError);
-
   return (
     <main className={styles.container}>
       <section className={styles.top_section}>

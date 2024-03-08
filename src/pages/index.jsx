@@ -43,9 +43,17 @@ export default function Home() {
 
     requestAnimationFrame(raf);
 
-    setTimeout(() => {
+    const isFirstLoad = sessionStorage.getItem("isFirstLoad");
+
+    if (!isFirstLoad) {
+      setTimeout(() => {
+        setIsLoading(false);
+        window.scrollTo(0, 0);
+        sessionStorage.setItem("isFirstLoad", "false");
+      }, 3500);
+    } else {
       setIsLoading(false);
-    }, 3500);
+    }
   }, []);
 
   if (!projects) {
