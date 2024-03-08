@@ -1,11 +1,30 @@
 export const Links = [
   {
+    title: "Home",
+    href: "/",
+  },
+  {
     title: "About",
     href: "/about",
   },
   {
     title: "Contact",
     href: "/contact",
+  },
+];
+
+export const ProjectLinks = [
+  {
+    title: "Triangulate",
+    href: "/projects/triangulate",
+  },
+  {
+    title: "Deliveroo",
+    href: "/projects/deliveroo",
+  },
+  {
+    title: "Gollum's Cave",
+    href: "/projects/gollums-cave",
   },
 ];
 

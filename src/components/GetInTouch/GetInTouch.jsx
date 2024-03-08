@@ -3,11 +3,11 @@ import React, { useState, useRef } from "react";
 import chris from "../../assets/images/chris-pic2.svg";
 import Image from "next/Image";
 import Button from "../Button/Button";
-import axios from "axios";
 import emailjs from "@emailjs/browser";
 
 const GetInTouch = () => {
   const [activeLabel, setActiveLabel] = useState(null);
+  const [isError, setIsError] = useState(false);
   const [formFields, setFormFields] = useState({
     name: "",
     email: "",
@@ -61,15 +61,7 @@ const GetInTouch = () => {
   };
 
   const isFormValid = () => {
-    if (
-      !isNameValid() ||
-      !isEmailValid() ||
-      !isServicesValid() ||
-      !isMessageValid()
-    ) {
-      return false;
-    }
-    return true;
+    return isNameValid() && isEmailValid() && isServicesValid() && isMessageValid();
   };
 
   const sendEmail = (e) => {
@@ -95,34 +87,10 @@ const GetInTouch = () => {
             console.log("FAILED...", error.text);
           }
         );
+    } else {
+      setIsError(true);
     }
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const newMessage = {
-  //     name: formFields.name,
-  //     email: formFields.email,
-  //     services: formFields.services,
-  //     textarea: formFields.textarea,
-  //   };
-
-  //   if (isFormValid()) {
-  //     await axios.post("/api/submitForm", newMessage);
-  //     setFormSubmitted(true);
-  //     formRef.current.reset();
-  //   }
-
-  //   setFormFields({
-  //     name: "",
-  //     email: "",
-  //     services: "",
-  //     textarea: "",
-  //   });
-
-  //   console.log("Form submitted!");
-  // };
 
   const handleInputFocus = (labelFor) => {
     setActiveLabel(labelFor);
@@ -132,19 +100,7 @@ const GetInTouch = () => {
     setActiveLabel(null);
   };
 
-  // const noName = () => {
-  //   if (formSubmitted && !formFields.name.length) {
-  //     return <p>Please enter a name</p>;
-  //   }
-  //   return null;
-  // };
-
-  // const noEmail = () => {
-  //   if (formSubmitted && !formFields.email.length) {
-  //     return <p>Please enter an email</p>;
-  //   }
-  //   return null;
-  // };
+  console.log(isError);
 
   return (
     <main className={styles.container}>
@@ -157,19 +113,19 @@ const GetInTouch = () => {
           height={120}
         />
         <div className={styles.heading_container}>
-          <h1 className={styles.heading}>Contact me</h1>
-          <h2 className={styles.heading}>Let's work together</h2>
+          <h1 className={styles.title}>Contact me</h1>
+
+          <a className={styles.email} href="mailto:chris.dcoutts@gmail.com">
+            <Button
+              className={styles.button}
+              label={`chris.dcoutts@gmail.com \u2198`}
+            />
+          </a>
         </div>
       </section>
-      <div>
-        <h3 className={styles.contact_heading}>contact details</h3>
-        <a className={styles.email} href="mailto:chris.dcoutts@gmail.com">
-          <Button
-            className={styles.button}
-            label={`chris.dcoutts@gmail.com \u2198`}
-          />
-        </a>
-      </div>
+
+      <h2 className={styles.heading}>Let's work together</h2>
+
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
@@ -184,7 +140,9 @@ const GetInTouch = () => {
           </div>
           <input
             onChange={onChange}
-            className={styles.input}
+            className={`${styles.input} ${
+              isError && !formFields.name.length ? styles.error_outline : ""
+            }`}
             id="name"
             name="name"
             type="text"
@@ -205,14 +163,15 @@ const GetInTouch = () => {
           </div>
           <input
             onChange={onChange}
-            className={styles.input}
+            className={`${styles.input} ${
+              isError && !formFields.email.length ? styles.error_outline : ""
+            }`}
             type="email"
             id="email"
             name="email"
             placeholder="joe.smith@email.com*"
             onFocus={() => handleInputFocus("email")}
             onBlur={handleInputBlur}></input>
-          {/* <p>{noEmail()}</p> */}
         </div>
         <div className={styles.form_col}>
           <div className={styles.label_header}>
@@ -227,7 +186,9 @@ const GetInTouch = () => {
           </div>
           <input
             onChange={onChange}
-            className={styles.input}
+            className={`${styles.input} ${
+              isError && !formFields.services.length ? styles.error_outline : ""
+            }`}
             type="text"
             id="services"
             name="services"
@@ -251,11 +212,14 @@ const GetInTouch = () => {
             type="text"
             id="textarea"
             name="textarea"
-            className={styles.input}
+            className={`${styles.input} ${
+              isError && !formFields.textarea.length ? styles.error_outline : ""
+            }`}
             placeholder="Hey, Chris ..."
             onFocus={() => handleInputFocus("textarea")}
             onBlur={handleInputBlur}></textarea>
         </div>
+        {isError && <ErrorMessage />}
         <div className={styles.button_container}>
           <Button
             className={`${styles.button} ${
@@ -270,3 +234,7 @@ const GetInTouch = () => {
 };
 
 export default GetInTouch;
+
+export const ErrorMessage = () => {
+  return <p className={styles.error}>**Please write in all the fields**</p>;
+};

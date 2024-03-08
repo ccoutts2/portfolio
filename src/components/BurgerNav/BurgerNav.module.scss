@@ -13,7 +13,7 @@
   .body {
     @include flex(column, space-between, stretch);
     right: 0;
-    gap: 0.8rem;
+    gap: 0.4rem;
 
     .link_container {
       perspective: 7.5rem;
@@ -24,11 +24,17 @@
       text-decoration: none;
       font-size: 2rem;
     }
+
+    .projects {
+      font-size: 1rem;
+      display: inline;
+    }
   }
 
   .footer {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex(row, flex-start, stretch);
+    gap: 0.4rem;
+    font-size: 0.7rem;
 
     a {
       width: 50%;

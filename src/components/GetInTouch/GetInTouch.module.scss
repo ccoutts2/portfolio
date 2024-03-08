@@ -18,15 +18,20 @@
 }
 
 .heading_container {
-  @include flex(column, space-between, flex-start);
+  @include flex(column, flex-end, flex-start);
 }
 
 .image {
   object-fit: cover;
 }
 
+.title {
+  font-weight: 400;
+}
+
 .heading {
   font-weight: 400;
+  padding-top: 1rem;
 }
 
 .contact_heading {
@@ -93,4 +98,14 @@
 
 .button_confirm {
   background-image: url("../../assets/icons/likes.svg");
+}
+
+.error_outline {
+  background: rgba(112, 6, 6, 0.1);
+  border-radius: 1rem;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: rgb(205, 4, 4);
 }

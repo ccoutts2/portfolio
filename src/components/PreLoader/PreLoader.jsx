@@ -15,7 +15,7 @@ const PreLoader = () => {
       () => {
         setIndex(index + 1);
       },
-      index === 0 ? 2500 : 165
+      index === 0 ? 2500 : 200
     );
 
     return () => clearTimeout(timeoutId);

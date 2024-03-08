@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./NavBar.module.scss";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { AnimatePresence, motion } from "framer-motion";
-import BurgerNav from "@/BurgerNav/BurgerNav";
+import BurgerNav from "../BurgerNav/BurgerNav";
 import Inner from "../Inner/Inner";
 
 const variants = {

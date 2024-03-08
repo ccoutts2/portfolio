@@ -5,11 +5,51 @@
   align-items: $align;
 }
 
+$tablet-breakpoint: 768px;
+$big-tablet-breakpoint: 1035px;
+$desktop-breakpoint: 1280px;
+$max-width: 1280px;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (min-width: $big-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
 .profile {
   padding-inline: 1rem;
   overflow: hidden;
   position: relative;
   height: 145vh;
+
+  @include tablet {
+    height: 105vh;
+  }
+
+  @include big-tablet {
+    height: 105vh;
+  }
+
+  @include desktop {
+    height: 100vh;
+  }
 }
 
 .title {
@@ -19,7 +59,19 @@
 
 .slider_container {
   position: absolute;
-  bottom: calc(145vh - 9rem);
+  bottom: calc(145vh - 10.5rem);
+
+  @include tablet {
+    top: calc(105vh - 8.5rem);
+  }
+
+  @include big-tablet {
+    top: calc(105vh - 9.5rem);
+  }
+
+  @include desktop {
+    top: calc(100vh - 14rem);
+  }
 }
 
 .slider {
@@ -31,8 +83,23 @@
 .slider h2 {
   position: relative;
   margin: 0.5rem;
-  font-size: 4rem;
+  font-size: 6rem;
   padding-right: 2.5rem;
+
+  @include tablet {
+    font-size: 7rem;
+    padding-right: 3rem;
+  }
+
+  @include big-tablet {
+    font-size: 9rem;
+    padding-right: 5rem;
+  }
+
+  @include desktop {
+    font-size: 10rem;
+    padding-right: 5rem;
+  }
 }
 
 .slider h2:nth-of-type(2) {
@@ -42,6 +109,10 @@
 
 .text_section {
   padding-top: 6rem;
+
+  @include tablet {
+    padding-top: 1rem;
+  }
 }
 
 .header {

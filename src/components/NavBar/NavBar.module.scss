@@ -24,12 +24,12 @@
 
 .list_container {
   @include flex(row, flex-end, baseline);
+  width: 50%;
 }
 
 .list {
   @include flex(row, flex-end, baseline);
   width: 100%;
-  gap: 0.5rem;
   list-style: none;
 }
 
@@ -41,6 +41,7 @@
 .link {
   text-decoration: none;
   color: black;
+  padding-left: 2rem;
 }
 
 .menu_header {

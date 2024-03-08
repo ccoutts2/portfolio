@@ -1,6 +1,6 @@
 import styles from "./BurgerNav.module.scss";
 import React from "react";
-import { Links, FooterLinks } from "./data";
+import { Links, FooterLinks, ProjectLinks } from "./data";
 import { motion } from "framer-motion";
 
 const perspective = {
@@ -59,6 +59,25 @@ const BurgerNav = () => {
                 exit="exit"
                 initial="initial">
                 <a href={link.href}>{link.title}</a>
+              </motion.div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className={styles.body}>
+        {ProjectLinks.map((link, i) => {
+          return (
+            <div key={i} className={styles.link_container}>
+              <motion.div
+                custom={i}
+                variants={slideIn}
+                animate="enter"
+                exit="exit"
+                initial="initial">
+                <a className={styles.projects} href={link.href}>
+                  {link.title}
+                </a>
               </motion.div>
             </div>
           );
