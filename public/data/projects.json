@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "triangulate",
-    "description": "Step into the map with your friends and discover pubs in your city. Triangulate makes planning fun.",
+    "description": "Design & Development",
     "techStack": [
       "React.js",
       "Node.js",
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "title": "deliveroo",
-    "description": "How might we enhance the experience of sending and receiving a gift for any occasion? 24 Hour Hackathon with UX Designers.",
+    "description": "Development",
     "techStack": ["React.js", "Scss"],
     "imageSrc": "/images/deliveroo-1.svg",
     "link": "/projects/deliveroo",
@@ -29,7 +29,7 @@
   {
     "id": 3,
     "title": "gollums-cave",
-    "description": "Enter Gollum's cave and answer all the riddles to leave with the ring...alive",
+    "description": "Design & Development",
     "techStack": ["React.js", "Node.js", "Express.js", "Scss"],
     "imageSrc": "/images/gollum-1.svg",
     "link": "/projects/gollum",

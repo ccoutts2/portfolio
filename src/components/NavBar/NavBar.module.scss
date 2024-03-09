@@ -1,3 +1,5 @@
+// Mixins
+
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
@@ -5,10 +7,55 @@
   align-items: $align;
 }
 
+$big-mobile-breakpoint: 660px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin big-mobile {
+  @media (min-width: $big-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (min-width: $big-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+// Styling
+
 .nav {
   @include flex(row, space-between, flex-end);
   border-bottom: 1px solid black;
   padding-inline: 1rem;
+
+  @include tablet {
+    padding-inline: 2rem;
+  }
+
+  @include desktop {
+    @include max-content;
+    padding-inline: 4rem;
+  }
 }
 
 .title_container {
@@ -46,9 +93,21 @@
 
 .menu_header {
   position: fixed;
-  right: 0;
+  right: 0.85rem;
   z-index: 1000;
-  top: 10rem;
+  top: 4.5rem;
+
+  @include big-mobile {
+    top: 1rem;
+  }
+
+  @include tablet {
+    right: 2rem;
+  }
+
+  @include desktop {
+    right: 4rem;
+  }
 
   .menu {
     width: 400px;

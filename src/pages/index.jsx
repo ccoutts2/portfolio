@@ -50,7 +50,7 @@ export default function Home() {
         setIsLoading(false);
         window.scrollTo(0, 0);
         sessionStorage.setItem("isFirstLoad", "false");
-      }, 3500);
+      }, 3850);
     } else {
       setIsLoading(false);
     }
@@ -77,12 +77,13 @@ export default function Home() {
         <h2 className={styles.header}>/ projects</h2>
         <div className={styles.projects_main}>
           <div className={styles.projects_body}>
-            {projects.map((project, index) => {
+            {projects.map((project, index, description) => {
               return (
                 <Projects
                   key={index}
                   index={index}
                   title={project.title}
+                  description={project.description}
                   setModal={setModal}
                 />
               );

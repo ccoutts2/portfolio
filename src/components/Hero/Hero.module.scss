@@ -5,9 +5,51 @@
   align-items: $align;
 }
 
+$big-mobile-breakpoint: 660px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin big-mobile {
+  @media (min-width: $big-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (min-width: $big-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
 .hero {
   padding-inline: 1rem;
   @include flex(row, center, center);
+
+  @include tablet {
+    padding: 2rem 1rem;
+  }
+
+  @include desktop {
+    padding: 3rem 1rem;
+  }
 }
 
 .image_container {

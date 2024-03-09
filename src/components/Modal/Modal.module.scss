@@ -7,14 +7,62 @@
 
 $primary-background: #cdcdcd;
 
+$big-mobile-breakpoint: 660px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin big-mobile {
+  @media (min-width: $big-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (min-width: $big-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
 .modal_container {
-  height: 100px;
-  width: 100px;
+  height: 6.25rem;
+  width: 6.25rem;
   position: absolute;
   background-color: white;
   overflow: hidden;
   pointer-events: none;
   @include flex(row, center, center);
+
+  @include tablet {
+    height: 9rem;
+    width: 9rem;
+  }
+
+  @include tablet {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  @include desktop {
+    @include max-content;
+  }
 }
 
 .modal_slider {
@@ -49,6 +97,12 @@ $primary-background: #cdcdcd;
   font-size: 0.7rem;
   font-weight: 300;
   pointer-events: none;
+
+  @include tablet {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.85rem;
+  }
 }
 
 .cursor_label {

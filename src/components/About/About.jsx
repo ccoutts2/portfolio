@@ -13,8 +13,7 @@ const About = () => {
 
   return (
     <main className={styles.about}>
-      <div>
-        {/* <h2 className={styles.title}>About</h2> */}
+      <div className={styles.text_container}>
         <p className={styles.text}>
           I am software engineer based in London. I enjoy combining my love for
           problem solving and logic, with creative flare.

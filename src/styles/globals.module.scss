@@ -11,6 +11,40 @@
   align-items: $align;
 }
 
+$big-mobile-breakpoint: 660px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin big-mobile {
+  @media (min-width: $big-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (min-width: $big-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
 .globals {
   *,
   *::before,
@@ -24,6 +58,14 @@
   .header {
     font-weight: 400;
     padding: 1rem;
+
+    @include tablet {
+      padding: 2rem 2rem 1rem;
+    }
+
+    @include desktop {
+      padding: 3rem 4rem 1rem;
+    }
   }
 
   html,
@@ -46,13 +88,19 @@
   }
 
   .projects_main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
+
+    @include tablet {
+      padding-inline: 2rem;
+    }
+
+    @include desktop {
+      padding: 1rem 4rem 2rem;
+      @include max-content;
+    }
   }
 
   .projects_body {
-    display: flex;
     width: 100%;
     @include flex(column, center, center);
   }

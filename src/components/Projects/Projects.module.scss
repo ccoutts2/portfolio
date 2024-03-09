@@ -5,6 +5,40 @@
   align-items: $align;
 }
 
+$big-mobile-breakpoint: 660px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin big-mobile {
+  @media (min-width: $big-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (min-width: $big-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
 $primary-background: #cdcdcd;
 
 .link {
@@ -20,6 +54,10 @@ $primary-background: #cdcdcd;
   border-top: 1px solid rgb(57, 57, 57);
   cursor: pointer;
   transition: all 0.2s linear;
+
+  @include tablet {
+    padding-inline: 0;
+  }
 }
 
 .project_container:hover {
