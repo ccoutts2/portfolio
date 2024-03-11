@@ -124,7 +124,7 @@ const GetInTouch = () => {
         </div>
       </section>
 
-      <h2 className={styles.heading}>Let's work together</h2>
+      <h2 className={styles.heading}>Let&apos;s work together</h2>
 
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles.form_col}>
@@ -135,7 +135,7 @@ const GetInTouch = () => {
               className={`${styles.label} ${
                 activeLabel === "name" ? styles.activeLabel : ""
               }`}>
-              What's your name?
+              What&apos;s your name?
             </label>
           </div>
           <input
@@ -158,7 +158,7 @@ const GetInTouch = () => {
                 activeLabel === "email" ? styles.activeLabel : ""
               }`}
               htmlFor="email">
-              What's your email?
+              What&apos;s your email?
             </label>
           </div>
           <input

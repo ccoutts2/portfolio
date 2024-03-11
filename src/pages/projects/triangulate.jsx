@@ -102,8 +102,9 @@ export default function Triangulate() {
             </section>
             <div className={styles.summary}>
               <p>
-                Meet up effortlessly with your friends. Triangulate let's you step
-                into the map where you can discover the nearest and best pubs to you.
+                Meet up effortlessly with your friends. Triangulate let&apos;s you
+                step into the map where you can discover the nearest and best pubs to
+                you.
               </p>
             </div>
           </div>

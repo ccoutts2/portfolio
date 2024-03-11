@@ -20,7 +20,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className={styles.links_container}>
-            <h4 className={styles.container_header}>Let's connect</h4>
+            <h4 className={styles.container_header}>Let&apos;s connect</h4>
             <Link
               href="https://www.linkedin.com/in/chris-coutts/"
               target="_blank"

@@ -61,7 +61,7 @@ export default function Home() {
   }
 
   if (isError) {
-    return <p>There's something wrong, contact me</p>;
+    return <p>There&apos;s something wrong, contact me</p>;
   }
 
   return (

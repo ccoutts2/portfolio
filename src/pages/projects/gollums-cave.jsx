@@ -51,7 +51,7 @@ export default function Triangulate() {
         <NavBar />
         <section className={styles.main}>
           <div className={styles.content}>
-            <h1 className={styles.heading}>/ gollum's cave</h1>
+            <h1 className={styles.heading}>/ gollum&apos;s cave</h1>
             <section className={styles.info_container}>
               <div className={styles.info}>
                 <h3 className={styles.header}>year</h3>
@@ -73,7 +73,7 @@ export default function Triangulate() {
 
             <div className={styles.summary}>
               <p>
-                Enter Gollum's cave and answer all the riddles to leave with the
+                Enter Gollum&apos;s cave and answer all the riddles to leave with the
                 ring. 24 Hour Pair Programming Hackathon
               </p>
             </div>

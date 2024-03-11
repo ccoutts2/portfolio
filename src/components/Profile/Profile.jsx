@@ -80,7 +80,7 @@ const About = () => {
       </div>
 
       <section className={styles.text_section}>
-        <p>I'm a full stack developer based in London</p>
+        <p>I&apos;m a full stack developer based in London</p>
         <p className={styles.text}>
           I come from a varied background having initially studied chemical
           engineering, before moving into a Product Manager role and then finally
@@ -93,8 +93,8 @@ const About = () => {
         </p>
         <section>
           <p className={styles.text}>
-            As I'm looking to break into the tech world, you'll find me behind the
-            laptop screen developing my knowledge and skillset
+            As I'm looking to break into the tech world, you&apos;ll find me behind
+            the laptop screen developing my knowledge and skillset
           </p>
           <p className={styles.text}>
             However, in my free time I enjoy playing video games, watching my
@@ -103,10 +103,10 @@ const About = () => {
           </p>
         </section>
         <section className={styles.text}>
-          <h3 className={styles.header}>Let's create something cool!</h3>
+          <h3 className={styles.header}>Let&apos;s create something cool!</h3>
           <p className={styles.text}>
-            I'm open to perm and contract roles, and looking forward to putting my
-            newfound skills to the test
+            I&apos;m open to perm and contract roles, and looking forward to putting
+            my newfound skills to the test
           </p>
           <p className={styles.text}>
             See my{" "}
