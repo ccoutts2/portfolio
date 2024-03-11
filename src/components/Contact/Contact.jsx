@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/Image";
+import Image from "next/image";
 import styles from "./Contact.module.scss";
 import Button from "../Button/Button";
 import chris from "../../assets/images/chris-smart3.svg";
