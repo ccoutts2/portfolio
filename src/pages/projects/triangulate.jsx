@@ -9,7 +9,7 @@ import Inner from "@/components/Inner/Inner";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import Button from "@/components/Button/Button";
-import Image from "next/Image";
+import Image from "next/image";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import useDimension from "@/hooks/useDimension";

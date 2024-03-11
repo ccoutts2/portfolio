@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import styles from "./Modal.module.scss";
-import Image from "next/Image";
+import Image from "next/image";
 import gsap from "gsap";
 
 const scaleAnimation = {

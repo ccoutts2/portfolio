@@ -1,7 +1,7 @@
 import styles from "./GetInTouch.module.scss";
 import React, { useState, useRef } from "react";
 import chris from "../../assets/images/chris-pic2.svg";
-import Image from "next/Image";
+import Image from "next/image";
 import Button from "../Button/Button";
 import emailjs from "@emailjs/browser";
 
