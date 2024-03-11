@@ -39,7 +39,7 @@ const About = () => {
 
       gsap.set(firstText.current, { xPercent: xPercent });
       gsap.set(secondText.current, { xPercent: xPercent });
-      xPercent += 0.2 * direction;
+      xPercent += 0.18 * direction;
       requestAnimationFrame(animate);
     }
   };
@@ -74,8 +74,8 @@ const About = () => {
       <h1 className={styles.title}>/ about</h1>
       <div className={styles.slider_container}>
         <div ref={slider} className={styles.slider}>
-          <h2 ref={firstText}>Full Stack Developer -</h2>
-          <h2 ref={secondText}>Full Stack Developer -</h2>
+          <h2 ref={firstText}>Full Stack Developer &mdash;</h2>
+          <h2 ref={secondText}>Full Stack Developer &mdash;</h2>
         </div>
       </div>
 

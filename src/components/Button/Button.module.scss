@@ -7,6 +7,14 @@ $primary-background: #cdcdcd;
   align-items: $align;
 }
 
+$desktop-breakpoint: 1280px;
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
 .button {
   margin-top: 0.5rem;
   padding: 0.25rem 1rem;
@@ -20,6 +28,10 @@ $primary-background: #cdcdcd;
   transform: translateY(0%) rotate(0.001deg);
   transform-origin: top right;
   position: relative;
+
+  @include desktop {
+    margin-top: 1rem;
+  }
 }
 
 .button {

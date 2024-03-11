@@ -41,20 +41,26 @@ $max-width: 1280px;
 
   @include tablet {
     height: 105vh;
+    padding-inline: 2rem;
   }
 
   @include big-tablet {
-    height: 105vh;
+    height: 107vh;
   }
 
   @include desktop {
     height: 100vh;
+    padding-inline: 4rem;
   }
 }
 
 .title {
   font-weight: 400;
   padding-top: 1rem;
+
+  @include desktop {
+    padding-top: 1.5rem;
+  }
 }
 
 .slider_container {
@@ -66,7 +72,7 @@ $max-width: 1280px;
   }
 
   @include big-tablet {
-    top: calc(105vh - 9.5rem);
+    top: calc(107vh - 10rem);
   }
 
   @include desktop {
@@ -117,6 +123,10 @@ $max-width: 1280px;
 
 .header {
   font-size: 2rem;
+
+  @include desktop {
+    padding-top: 1.5rem;
+  }
 }
 
 .text {
