@@ -3,7 +3,7 @@
 $primary-background: #cdcdcd;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
-$max-width: 1280px;
+$max-width: 1550px;
 
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
@@ -31,6 +31,15 @@ $max-width: 1280px;
 
 .content {
   padding-inline: 1rem;
+
+  @include tablet {
+    padding-inline: 2rem;
+  }
+
+  @include desktop {
+    padding-inline: 4rem;
+    @include max-content;
+  }
 }
 
 .info_container {
@@ -109,15 +118,40 @@ $max-width: 1280px;
 
     &:nth-of-type(1) {
       top: -85%;
+
+      @include desktop {
+        top: -50%;
+        @include max-content;
+      }
     }
 
     &:nth-of-type(2) {
       top: -105%;
+
+      @include desktop {
+        top: -55%;
+        @include max-content;
+      }
     }
 
     &:nth-of-type(3) {
       top: -55%;
+
+      @include desktop {
+        top: -28%;
+        @include max-content;
+      }
     }
+  }
+
+  @include tablet {
+    padding-inline: 2rem;
+  }
+
+  @include desktop {
+    padding-inline: 4rem;
+    height: 250vh;
+    @include max-content;
   }
 }
 
@@ -127,6 +161,16 @@ $max-width: 1280px;
 
 .about {
   padding: 1rem;
+  text-align: center;
+
+  @include tablet {
+    padding-inline: 2rem;
+  }
+
+  @include desktop {
+    padding-inline: 4rem;
+    @include max-content;
+  }
 }
 
 .card {
@@ -149,8 +193,21 @@ $max-width: 1280px;
   width: 100%;
   max-height: 75vh;
   overflow: hidden;
-  // border-radius: 1rem;
-  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include desktop {
+    width: 60%;
+  }
+
+  @include tablet {
+    max-height: 80vh;
+  }
 }
 
 .video {

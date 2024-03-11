@@ -9,8 +9,6 @@ import Inner from "@/components/Inner/Inner";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import Button from "@/components/Button/Button";
-import Image from "next/Image";
-import { motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 
 export default function Triangulate() {
@@ -66,7 +64,7 @@ export default function Triangulate() {
               <div className={styles.button_container}>
                 <Link
                   className={styles.link}
-                  href="https://github.com/ccoutts2/triangulate-project"
+                  href="https://github.com/ccoutts2/lotr-riddle-game-client"
                   target="_blank">
                   <Button label={`GitHub \u2198`} />
                 </Link>

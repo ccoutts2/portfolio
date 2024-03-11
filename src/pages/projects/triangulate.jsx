@@ -38,7 +38,7 @@ export default function Triangulate() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, height * 2.5]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 2.8]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.7]);
 
   const fetchTechStack = async () => {
@@ -103,9 +103,9 @@ export default function Triangulate() {
           </div>
           <div className={styles.spacer}></div>
           <article ref={container} className={styles.gallery}>
-            <Column images={[images[0], images[1], images[2]]} y={y} />
-            <Column images={[images[3], images[4], images[5]]} y={y2} />
-            <Column images={[images[6], images[7], images[8]]} y={y3} />
+            <Column images={[images[0], images[2], images[1]]} y={y} />
+            <Column images={[images[3], images[6], images[5]]} y={y2} />
+            <Column images={[images[4], images[7], images[8]]} y={y3} />
           </article>
           <div className={styles.spacer}></div>
           <section className={styles.about}>
