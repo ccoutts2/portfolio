@@ -93,8 +93,8 @@ const About = () => {
         </p>
         <section>
           <p className={styles.text}>
-            As I'm looking to break into the tech world, you&apos;ll find me behind
-            the laptop screen developing my knowledge and skillset
+            As I&apos;m looking to break into the tech world, you&apos;ll find me
+            behind the laptop screen developing my knowledge and skillset
           </p>
           <p className={styles.text}>
             However, in my free time I enjoy playing video games, watching my
