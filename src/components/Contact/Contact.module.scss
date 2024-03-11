@@ -6,7 +6,6 @@
 }
 
 $primary-background: #cdcdcd;
-
 $big-mobile-breakpoint: 660px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
@@ -46,7 +45,7 @@ $max-width: 1550px;
 }
 
 .contact_section {
-  padding-top: 1rem;
+  padding: 1rem 0;
   border-top: 1px solid black;
   @include flex(row, flex-start, flex-end);
 

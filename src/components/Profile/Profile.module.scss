@@ -5,10 +5,17 @@
   align-items: $align;
 }
 
+$small-mobile-breakpoint: 375px;
 $tablet-breakpoint: 768px;
 $big-tablet-breakpoint: 1035px;
 $desktop-breakpoint: 1280px;
 $max-width: 1550px;
+
+@mixin small-mobile {
+  @media (min-width: $small-mobile-breakpoint) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
@@ -39,6 +46,10 @@ $max-width: 1550px;
   position: relative;
   height: 145vh;
 
+  @include small-mobile {
+    height: 133vh;
+  }
+
   @include tablet {
     height: 105vh;
     padding-inline: 2rem;
@@ -67,6 +78,10 @@ $max-width: 1550px;
 .slider_container {
   position: absolute;
   bottom: calc(145vh - 10.5rem);
+
+  @include small-mobile {
+    bottom: calc(133vh - 10.5rem);
+  }
 
   @include tablet {
     top: calc(105vh - 8.5rem);
@@ -141,4 +156,8 @@ $max-width: 1550px;
 
 .email {
   text-decoration: none;
+}
+
+.button_container {
+  margin: 2rem 0;
 }
