@@ -13,26 +13,17 @@
       "Figma",
       "Scss"
     ],
-    "imageSrc": "/images/triangulate-4.svg",
+    "imageSrc": "/images/triangulate-modal.svg",
     "link": "/projects/triangulate",
     "color": "#8C8C8C"
   },
   {
     "id": 2,
-    "title": "deliveroo",
-    "description": "Development",
-    "techStack": ["React.js", "Scss"],
-    "imageSrc": "/images/deliveroo-1.svg",
-    "link": "/projects/deliveroo",
-    "color": "#706063"
-  },
-  {
-    "id": 3,
     "title": "gollums-cave",
     "description": "Design & Development",
     "techStack": ["React.js", "Node.js", "Express.js", "Scss"],
-    "imageSrc": "/images/gollum-1.svg",
+    "imageSrc": "/images/gollum-modal.svg",
     "link": "/projects/gollum",
-    "color": "black"
+    "color": "rgb(57, 57, 57)"
   }
 ]

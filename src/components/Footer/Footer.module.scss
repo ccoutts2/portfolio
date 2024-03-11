@@ -56,7 +56,7 @@ $max-width: 1550px;
 }
 
 .links_container {
-  @include flex(column, center, flex-start);
+  @include flex(column, flex-start, flex-start);
   width: 50%;
   gap: 0.5rem;
 }

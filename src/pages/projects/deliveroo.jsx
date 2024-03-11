@@ -68,7 +68,7 @@ export default function Triangulate() {
   return (
     <main className={`${globalStyles.globals} ${navBarStyles}`}>
       <Head>
-        <title>Chris | Full Stack Dev</title>
+        <title>Chris | Full Stack Developer</title>
       </Head>
       <Inner>
         <NavBar />
@@ -87,7 +87,7 @@ export default function Triangulate() {
               <div className={styles.button_container}>
                 <Link
                   className={styles.link}
-                  href="https://github.com/ccoutts2/triangulate-project"
+                  href="https://github.com/ccoutts2/deliveroo-project"
                   target="_blank">
                   <Button label={`GitHub \u2198`} />
                 </Link>

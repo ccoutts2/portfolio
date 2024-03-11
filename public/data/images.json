@@ -1,13 +1,11 @@
 [
-  { "id": 1, "imageSrc": "/images/triangulate-2.svg" },
-  { "id": 2, "imageSrc": "/images/triangulate-3.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-4.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-5.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-6.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-7.svg" },
+  { "id": 13, "imageSrc": "/images/triangulate-modal.svg" },
   { "id": 3, "imageSrc": "/images/triangulate-8.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-9.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-10.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-11.svg" },
-  { "id": 3, "imageSrc": "/images/triangulate-12.svg" }
+  { "id": 5, "imageSrc": "/images/gollum-modal.svg" },
+  { "id": 6, "imageSrc": "/images/triangulate-6.svg" },
+  { "id": 7, "imageSrc": "/images/triangulate-7.svg" },
+  { "id": 8, "imageSrc": "/images/triangulate-9.svg" },
+  { "id": 10, "imageSrc": "/images/triangulate-10.svg" },
+  { "id": 10, "imageSrc": "/images/gollum-1.svg" },
+  { "id": 12, "imageSrc": "/images/triangulate-12.svg" }
 ]

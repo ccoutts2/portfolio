@@ -19,10 +19,6 @@ export const ProjectLinks = [
     href: "/projects/triangulate",
   },
   {
-    title: "Deliveroo",
-    href: "/projects/deliveroo",
-  },
-  {
     title: "Gollum's Cave",
     href: "/projects/gollums-cave",
   },
@@ -36,9 +32,5 @@ export const FooterLinks = [
   {
     title: "GitHub",
     href: "https://github.com/ccoutts2/",
-  },
-  {
-    title: "Instagram",
-    href: "/contact",
   },
 ];

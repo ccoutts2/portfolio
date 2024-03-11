@@ -33,9 +33,6 @@ const Footer = () => {
               className={styles.nav_link}>
               <h5 className={styles.container_text}>github</h5>
             </Link>
-            <Link href="/" className={styles.nav_link}>
-              <h5 className={styles.container_text}>instagram</h5>
-            </Link>
           </div>
         </section>
       </div>

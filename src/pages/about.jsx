@@ -21,7 +21,7 @@ export default function About() {
   return (
     <main className={styles.globals}>
       <Head>
-        <title>Chris | Full Stack Dev</title>
+        <title>Chris | Full Stack Developer</title>
       </Head>
       <Inner>
         <NavBar />

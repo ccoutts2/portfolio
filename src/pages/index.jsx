@@ -67,7 +67,7 @@ export default function Home() {
   return (
     <main className={styles.globals}>
       <Head>
-        <title>Chris | Full Stack Dev</title>
+        <title>Chris | Full Stack Developer</title>
       </Head>
       <AnimatePresence mode="wait">{isLoading && <PreLoader />}</AnimatePresence>
       <Inner>
@@ -77,7 +77,7 @@ export default function Home() {
         <h2 className={styles.header}>/ projects</h2>
         <div className={styles.projects_main}>
           <div className={styles.projects_body}>
-            {projects.map((project, index, description) => {
+            {projects.map((project, index) => {
               return (
                 <Projects
                   key={index}

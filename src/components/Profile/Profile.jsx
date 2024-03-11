@@ -84,7 +84,7 @@ const About = () => {
         <p className={styles.text}>
           I come from a varied background having initially studied chemical
           engineering, before moving into a Product Manager role and then finally
-          landing a job as a tech and design recruiter
+          landing a job as a Tech and Design Recruiter
         </p>
 
         <p className={styles.text}>
@@ -103,8 +103,7 @@ const About = () => {
           </p>
         </section>
         <section className={styles.text}>
-          <h3 className={styles.header}>Want to hire me?</h3>
-          <p className={styles.text}>Let's create something cool!</p>
+          <h3 className={styles.header}>Let's create something cool!</h3>
           <p className={styles.text}>
             I'm open to perm and contract roles, and looking forward to putting my
             newfound skills to the test
@@ -115,7 +114,7 @@ const About = () => {
               {" "}
               <span>[CONTACT] </span>{" "}
             </Link>{" "}
-            page or email me now!
+            page or email me now
           </p>
           <div className={styles.button_container}>
             <a className={styles.email} href="mailto:chris.dcoutts@gmail.com">

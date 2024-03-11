@@ -64,18 +64,18 @@ const NavBar = () => {
             {" "}
             <li className={styles.link}>Contact</li>
           </Link>
-          <Inner>
-            <div className={styles.menu_header}>
-              <motion.div
-                className={styles.menu}
-                variants={variants}
-                animate={isActive ? "open" : "closed"}
-                initial="closed">
-                <AnimatePresence> {isActive && <BurgerNav />}</AnimatePresence>
-              </motion.div>
-              <BurgerMenu isActive={isActive} setIsActive={setIsActive} />
-            </div>
-          </Inner>
+
+          <div className={styles.menu_header}>
+            <motion.div
+              className={styles.menu}
+              variants={variants}
+              animate={isActive ? "open" : "closed"}
+              initial="closed">
+              <AnimatePresence> {isActive && <BurgerNav />}</AnimatePresence>
+            </motion.div>
+
+            <BurgerMenu isActive={isActive} setIsActive={setIsActive} />
+          </div>
         </ul>
       </div>
     </header>

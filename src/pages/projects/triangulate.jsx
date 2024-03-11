@@ -72,7 +72,7 @@ export default function Triangulate() {
   return (
     <main className={`${globalStyles.globals} ${navBarStyles}`}>
       <Head>
-        <title>Chris | Full Stack Dev</title>
+        <title>Chris | Full Stack Developer</title>
       </Head>
       <Inner>
         <NavBar />
@@ -95,11 +95,17 @@ export default function Triangulate() {
                   target="_blank">
                   <Button label={`GitHub \u2198`} />
                 </Link>
-                <Link className={styles.link} href="/" target="_blank">
+                {/* <Link className={styles.link} href="/" target="_blank">
                   <Button label={`Website \u2198`} />
-                </Link>
+                </Link> */}
               </div>
             </section>
+            <div className={styles.summary}>
+              <p>
+                Meet up effortlessly with your friends. Triangulate let's you step
+                into the map where you can discover the nearest and best pubs to you.
+              </p>
+            </div>
           </div>
           <div className={styles.spacer}></div>
           <article ref={container} className={styles.gallery}>
@@ -109,10 +115,6 @@ export default function Triangulate() {
           </article>
           <div className={styles.spacer}></div>
           <section className={styles.about}>
-            <p>
-              Meet up effortlessly with your friends. Triangulate let's you step into
-              the map where you can discover the nearest and best pubs to you.
-            </p>
             <article className={styles.card}>
               {techStack[0].techStack.map((tech, index) => (
                 <div key={index} className={styles.tech_item}>

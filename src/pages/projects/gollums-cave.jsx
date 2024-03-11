@@ -45,7 +45,7 @@ export default function Triangulate() {
   return (
     <main className={`${globalStyles.globals} ${navBarStyles}`}>
       <Head>
-        <title>Chris | Full Stack Dev</title>
+        <title>Chris | Full Stack Developer</title>
       </Head>
       <Inner>
         <NavBar />
@@ -70,6 +70,13 @@ export default function Triangulate() {
                 </Link>
               </div>
             </section>
+
+            <div className={styles.summary}>
+              <p>
+                Enter Gollum's cave and answer all the riddles to leave with the
+                ring. 24 Hour Pair Programming Hackathon
+              </p>
+            </div>
           </div>
           <div className={styles.spacer}></div>
 
@@ -81,12 +88,8 @@ export default function Triangulate() {
 
           <div className={styles.spacer}></div>
           <section className={styles.about}>
-            <p>
-              Enter Gollum's cave and answer all the riddles to leave with the
-              ring...alive. 24 Hour Pair Programming Hackathon
-            </p>
             <article className={styles.card}>
-              {techStack[2].techStack.map((tech, index) => (
+              {techStack[1].techStack.map((tech, index) => (
                 <div key={index} className={styles.tech_item}>
                   {tech}
                 </div>
