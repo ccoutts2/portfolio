@@ -8,7 +8,7 @@
 $tablet-breakpoint: 768px;
 $big-tablet-breakpoint: 1035px;
 $desktop-breakpoint: 1280px;
-$max-width: 1280px;
+$max-width: 1550px;
 
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
@@ -51,6 +51,7 @@ $max-width: 1280px;
   @include desktop {
     height: 100vh;
     padding-inline: 4rem;
+    // @include max-content;
   }
 }
 

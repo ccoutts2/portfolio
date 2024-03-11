@@ -81,7 +81,9 @@ const GetInTouch = () => {
           () => {
             console.log("SUCCESS!");
             setFormSubmitted(true);
-            window.location.reload();
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
           },
           (error) => {
             console.log("FAILED...", error.text);
@@ -234,5 +236,5 @@ const GetInTouch = () => {
 export default GetInTouch;
 
 export const ErrorMessage = () => {
-  return <p className={styles.error}>**Please write in all the fields**</p>;
+  return <p className={styles.error}>**Please fill in all the fields**</p>;
 };
