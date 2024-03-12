@@ -69,7 +69,9 @@ export default function Home() {
       <Head>
         <title>Chris | Full Stack Developer</title>
       </Head>
-      <AnimatePresence mode="wait">{isLoading && <PreLoader />}</AnimatePresence>
+      <AnimatePresence mode="mount">
+        {isLoading && <PreLoader key="loader" />}
+      </AnimatePresence>
       <Inner>
         <NavBar />
         <Hero />

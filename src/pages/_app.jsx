@@ -5,7 +5,7 @@ export default function App({ Component, pageProps, router }) {
   return (
     <>
       {/* <Head></Head> */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="mount">
         <Component key={router.route} {...pageProps} />
         <style jsx global>{`
           body {

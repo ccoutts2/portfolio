@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 import Link from "next/link";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const About = () => {
+const Profile = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -130,4 +130,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Profile;
