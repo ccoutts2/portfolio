@@ -9,6 +9,7 @@ $small-mobile-breakpoint: 375px;
 $tablet-breakpoint: 768px;
 $big-tablet-breakpoint: 1035px;
 $desktop-breakpoint: 1280px;
+$big-desktop-breakpoint: 1400px;
 $max-width: 1550px;
 
 @mixin small-mobile {
@@ -31,6 +32,12 @@ $max-width: 1550px;
 
 @mixin desktop {
   @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media (min-width: $big-desktop-breakpoint) {
     @content;
   }
 }
@@ -63,6 +70,11 @@ $max-width: 1550px;
     height: 100vh;
     padding-inline: 4rem;
   }
+
+  @include big-desktop {
+    height: 98vh;
+    padding-inline: 4rem;
+  }
 }
 
 .title {
@@ -93,6 +105,10 @@ $max-width: 1550px;
   @include desktop {
     top: calc(100vh - 14rem);
   }
+
+  @include big-desktop {
+    top: calc(98vh - 16rem);
+  }
 }
 
 .slider {
@@ -119,6 +135,11 @@ $max-width: 1550px;
 
   @include desktop {
     font-size: 10rem;
+    padding-right: 5rem;
+  }
+
+  @include big-desktop {
+    font-size: 12rem;
     padding-right: 5rem;
   }
 }

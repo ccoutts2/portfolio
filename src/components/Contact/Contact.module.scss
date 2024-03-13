@@ -55,7 +55,6 @@ $max-width: 1550px;
 
   @include tablet {
     padding-inline: 4rem;
-    @include max-content;
   }
 }
 

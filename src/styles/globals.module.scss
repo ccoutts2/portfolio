@@ -95,7 +95,6 @@ $max-width: 1550px;
 
     @include desktop {
       padding: 1rem 4rem 2rem;
-      @include max-content;
     }
   }
 

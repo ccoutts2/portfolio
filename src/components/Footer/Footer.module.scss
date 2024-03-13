@@ -51,7 +51,6 @@ $max-width: 1550px;
 
   @include desktop {
     padding: 1rem 4rem 0.5rem;
-    @include max-content;
   }
 }
 
@@ -87,6 +86,5 @@ $max-width: 1550px;
 
   @include desktop {
     padding-inline: 4rem;
-    @include max-content;
   }
 }

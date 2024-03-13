@@ -43,7 +43,7 @@ $max-width: 1550px;
 
   @include desktop {
     padding-inline: 4rem;
-    @include max-content;
+    padding-top: 2rem;
   }
 }
 
@@ -52,6 +52,10 @@ $max-width: 1550px;
   width: 100%;
   @include flex(row, flex-start, stretch);
   gap: 0.5rem;
+
+  @include desktop {
+    padding-bottom: 1rem;
+  }
 }
 
 .heading_container {
@@ -60,6 +64,11 @@ $max-width: 1550px;
 
 .image {
   object-fit: cover;
+
+  @include desktop {
+    height: 30vh;
+    width: 25vh;
+  }
 }
 
 .title {
@@ -88,6 +97,10 @@ $max-width: 1550px;
   @include flex(column, center, flex-start);
   width: 100%;
   padding-top: 1rem;
+
+  @include desktop {
+    padding-top: 3rem;
+  }
 }
 
 .form_col {

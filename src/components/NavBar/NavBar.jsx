@@ -4,7 +4,6 @@ import styles from "./NavBar.module.scss";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { AnimatePresence, motion } from "framer-motion";
 import BurgerNav from "../BurgerNav/BurgerNav";
-import Inner from "../Inner/Inner";
 
 const variants = {
   open: {
@@ -40,7 +39,10 @@ const NavBar = () => {
     function getFormattedTime() {
       const d = new Date();
       return (
-        "GMT " + d.getHours() + " : " + d.getMinutes().toString().padStart(2, "0")
+        d.getHours() +
+        " : " +
+        d.getMinutes().toString().padStart(2, "0") +
+        " Local Time"
       );
     }
 
@@ -55,8 +57,16 @@ const NavBar = () => {
         </Link>
         <Clock />
       </div>
+
       <div className={styles.list_container}>
         <ul className={styles.list}>
+          <Link
+            href="https://github.com/ccoutts2/"
+            target="_blank"
+            className={styles.project_links}>
+            {" "}
+            <li className={styles.project_link}>GitHub</li>
+          </Link>
           <Link href="/about" className={styles.links}>
             <li className={styles.link}>About</li>
           </Link>

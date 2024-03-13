@@ -74,8 +74,6 @@ export default function Home() {
       </AnimatePresence>
       <Inner>
         <NavBar />
-        <Hero />
-        <About />
         <h2 className={styles.header}>/ projects</h2>
         <div className={styles.projects_main}>
           <div className={styles.projects_body}>
@@ -93,6 +91,8 @@ export default function Home() {
           </div>
           <Modal modal={modal} projects={projects} />
         </div>
+        <Hero />
+        <About />
         <Contact />
         <Footer />
       </Inner>

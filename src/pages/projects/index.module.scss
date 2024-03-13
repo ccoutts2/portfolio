@@ -38,7 +38,6 @@ $max-width: 1550px;
 
   @include desktop {
     padding-inline: 4rem;
-    @include max-content;
   }
 }
 
@@ -125,7 +124,6 @@ $max-width: 1550px;
 
       @include desktop {
         top: -50%;
-        @include max-content;
       }
     }
 
@@ -134,7 +132,6 @@ $max-width: 1550px;
 
       @include desktop {
         top: -55%;
-        @include max-content;
       }
     }
 
@@ -143,7 +140,6 @@ $max-width: 1550px;
 
       @include desktop {
         top: -28%;
-        @include max-content;
       }
     }
   }
@@ -155,7 +151,6 @@ $max-width: 1550px;
   @include desktop {
     padding-inline: 4rem;
     height: 250vh;
-    @include max-content;
   }
 }
 
@@ -173,7 +168,6 @@ $max-width: 1550px;
 
   @include desktop {
     padding-inline: 4rem;
-    @include max-content;
   }
 }
 

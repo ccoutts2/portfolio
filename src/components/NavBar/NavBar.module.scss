@@ -53,7 +53,6 @@ $max-width: 1550px;
   }
 
   @include desktop {
-    @include max-content;
     padding-inline: 4rem;
   }
 
@@ -66,6 +65,10 @@ $max-width: 1550px;
     margin: 0;
     padding: 0;
     font-weight: 400;
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
   }
 
   .list_container {
@@ -79,15 +82,40 @@ $max-width: 1550px;
     list-style: none;
   }
 
+  .project_links {
+    text-decoration: none;
+    color: black;
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
   .links {
     text-decoration: none;
     color: black;
+  }
+
+  .project_link {
+    text-decoration: none;
+    color: black;
+    display: none;
+
+    @include desktop {
+      display: flex;
+      font-size: 1.4rem;
+    }
   }
 
   .link {
     text-decoration: none;
     color: black;
     padding-left: 2rem;
+
+    @include desktop {
+      font-size: 1.4rem;
+    }
   }
 
   .menu_header {
