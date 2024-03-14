@@ -154,7 +154,7 @@ export default function Triangulate() {
             </article>
           </section>
           <section className={styles.process}>
-            <div className={styles.button_container}>
+            <div className={styles.process_button}>
               <Button
                 label={
                   showText ? `Hide the Process \u2198` : `Show the Process  \u2198`

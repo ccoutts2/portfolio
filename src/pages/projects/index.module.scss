@@ -73,7 +73,6 @@ $max-width: 1550px;
 }
 
 .button_container {
-  padding-bottom: 1rem;
   width: 100%;
   @include flex(row, space-between, stretch);
 
@@ -226,6 +225,10 @@ $max-width: 1550px;
   @include desktop {
     padding-inline: 4rem;
   }
+}
+
+.process_button {
+  padding-bottom: 1rem;
 }
 
 .process_text {
