@@ -123,7 +123,10 @@ export default function Triangulate() {
                   target="_blank">
                   <Button label={`GitHub \u2198`} />
                 </Link>
-                <Link className={styles.link} href="/" target="_blank">
+                <Link
+                  className={styles.link}
+                  href="https://www.linkedin.com/posts/chris-coutts_hey-linkedin-introducing-you-to-triangulate-activity-7165049293173682176-0-de?utm_source=share&utm_medium=member_desktop"
+                  target="_blank">
                   <Button label={`Video Demo \u2198`} />
                 </Link>
               </div>
