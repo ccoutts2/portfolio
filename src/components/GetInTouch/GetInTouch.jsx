@@ -86,7 +86,7 @@ const GetInTouch = () => {
             }, 1000);
           },
           (error) => {
-            console.log("FAILED...", error.text);
+            console.log("FAILED...", error);
           }
         );
     } else {
