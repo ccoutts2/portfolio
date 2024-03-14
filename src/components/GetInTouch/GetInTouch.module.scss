@@ -143,9 +143,7 @@ $max-width: 1550px;
 }
 
 .button_container {
-  @include desktop {
-    padding-bottom: 1rem;
-  }
+  padding-bottom: 1rem;
 }
 
 .button {
