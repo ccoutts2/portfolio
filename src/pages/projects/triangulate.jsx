@@ -195,9 +195,9 @@ export default function Triangulate() {
                   I created user authnetication so that a user could sign up and
                   login, which saw me integrate JWT tokens. The user had to login to
                   access specific features of the app, such as a profile page which
-                  showed them their favourite drink and groups they're part of. The
-                  intention was to create a more personal touch to the app to improve
-                  the user experience.
+                  showed them their favourite drink and groups they&apos;re part of.
+                  The intention was to create a more personal touch to the app to
+                  improve the user experience.
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
                   Finally, I polished the frontend with features like pub forms and
