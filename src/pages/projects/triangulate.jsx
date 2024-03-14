@@ -154,12 +154,14 @@ export default function Triangulate() {
             </article>
           </section>
           <section className={styles.process}>
-            <Button
-              label={
-                showText ? `Hide the Process \u2198` : `Show the Process  \u2198`
-              }
-              onClick={onClick}
-            />
+            <div className={styles.button_container}>
+              <Button
+                label={
+                  showText ? `Hide the Process \u2198` : `Show the Process  \u2198`
+                }
+                onClick={onClick}
+              />
+            </div>
 
             {showText ? (
               <motion.div

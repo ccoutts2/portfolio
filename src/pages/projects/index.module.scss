@@ -73,6 +73,7 @@ $max-width: 1550px;
 }
 
 .button_container {
+  padding-bottom: 1rem;
   width: 100%;
   @include flex(row, space-between, stretch);
 
