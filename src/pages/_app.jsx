@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import Router from "next/router";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps, router }) {
   let copies = [];
@@ -43,6 +44,7 @@ export default function App({ Component, pageProps, router }) {
     <>
       <AnimatePresence mode="mount" onExitComplete={onExit}>
         <Component key={router.route} {...pageProps} />
+        <Analytics />
         <style jsx global>{`
           body {
             margin: 0 !important;

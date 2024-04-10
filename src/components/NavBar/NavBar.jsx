@@ -38,11 +38,17 @@ const NavBar = () => {
 
     function getFormattedTime() {
       const d = new Date();
+      let hours = d.getHours();
+      let conversion = hours < 12 ? "AM" : "PM";
+
+      if (hours > 12) {
+        hours = hours - 12;
+      } else if (hours === 0) {
+        hours = 12;
+      }
+
       return (
-        d.getHours() +
-        " : " +
-        d.getMinutes().toString().padStart(2, "0") +
-        " Local Time"
+        hours + " : " + d.getMinutes().toString().padStart(2, "0") + " " + conversion
       );
     }
 
