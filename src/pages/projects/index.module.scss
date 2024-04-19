@@ -154,6 +154,24 @@ $max-width: 1550px;
   }
 }
 
+.horizontalScroll {
+  position: relative;
+  height: 250vh;
+
+  .sticky {
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    @include flex(row, center, center);
+    overflow: hidden;
+  }
+
+  .cards {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
 .spacer {
   height: 5vh;
 }
@@ -233,4 +251,17 @@ $max-width: 1550px;
 
 .process_text {
   padding: 0.5rem 0;
+}
+
+.cardContainer {
+  position: relative;
+  height: 28rem;
+  width: 28rem;
+  overflow: hidden;
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }

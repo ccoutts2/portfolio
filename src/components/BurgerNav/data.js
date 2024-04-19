@@ -15,6 +15,10 @@ export const Links = [
 
 export const ProjectLinks = [
   {
+    title: "France2k23",
+    href: "/projects/franc2k23",
+  },
+  {
     title: "Triangulate",
     href: "/projects/triangulate",
   },

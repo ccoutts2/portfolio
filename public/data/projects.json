@@ -1,6 +1,15 @@
 [
   {
     "id": 1,
+    "title": "france2k23",
+    "description": "Design & Development",
+    "techStack": ["Next.js", "Framer Motion", "GSAP", "Locomotive Scroll", "Scss"],
+    "imageSrc": "/images/france2k23-modal.svg",
+    "link": "/projects/france2k23",
+    "color": "#8e8Ce9f  "
+  },
+  {
+    "id": 2,
     "title": "triangulate",
     "description": "Design & Development",
     "techStack": [

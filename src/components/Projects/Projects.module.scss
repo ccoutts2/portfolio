@@ -49,7 +49,7 @@ $primary-background: #cdcdcd;
 
 .project_container {
   @include flex(row, space-between, center);
-  padding: 1rem 1rem;
+  padding: 1rem;
   width: 100%;
   border-top: 1px solid rgb(57, 57, 57);
   cursor: pointer;
@@ -75,7 +75,12 @@ $primary-background: #cdcdcd;
   transition: all 0.2s linear;
 }
 
-.title {
+.title,
+.text {
   font-weight: 400;
   text-transform: capitalize;
+
+  @include tablet {
+    font-size: 4vh;
+  }
 }
