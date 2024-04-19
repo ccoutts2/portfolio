@@ -16,7 +16,7 @@ export const Links = [
 export const ProjectLinks = [
   {
     title: "France2k23",
-    href: "/projects/franc2k23",
+    href: "/projects/france2k23",
   },
   {
     title: "Triangulate",

@@ -149,7 +149,7 @@ export default function Triangulate() {
           <section className={styles.about}>
             <h4>Tech Stack</h4>
             <article className={styles.card}>
-              {techStack[0].techStack.map((tech, index) => (
+              {techStack[1].techStack.map((tech, index) => (
                 <div key={index} className={styles.tech_item}>
                   {tech}
                 </div>

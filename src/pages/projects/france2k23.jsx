@@ -22,33 +22,29 @@ export default function Triangulate() {
 
   const { scrollYProgress } = useScroll({ ref });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-68%"]);
 
   const cards = [
     {
-      src: "/images/france2k23-2.svg",
-      title: "Title 1",
+      src: "/images/france2k23-6.svg",
       id: 1,
     },
     {
       src: "/images/france2k23-1.svg",
-      title: "Title 2",
       id: 2,
     },
     {
       src: "/images/france2k23-3.svg",
-      title: "Title 3",
       id: 3,
     },
     {
       src: "/images/france2k23-4.svg",
-      title: "Title 4",
       id: 4,
     },
+
     {
-      src: "/images/france2k23-5.svg",
-      title: "Title 5",
-      id: 5,
+      src: "/images/france2k23-2.svg",
+      id: 6,
     },
   ];
 
@@ -187,43 +183,33 @@ export default function Triangulate() {
                 initial="hidden"
                 animate="visible">
                 <motion.p variants={item} className={styles.process_text}>
-                  I initially kicked off this project with Figma mockups to nail down
-                  the visual flow. Opting for a clean look, I saved styling for
-                  later, ensuring a smooth process. Next up, I tackled the backend
-                  using Node.js and Express.js. With a dataset of 30 pubs from my
-                  friend&apos;s collection, I started with a GeoJSON format API.
+                  I wanted to further develop my immersive animation skillset by
+                  creating an image gallery from one of my favourites trips. I
+                  started off the project by collating a series of images from each
+                  city and built up an assets folder
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
-                  To plot these pubs on a map, I tapped into Mapbox&apos;s
-                  Geolocation API to convert the addresses to coordinates. Once my
-                  Pub API was set, I built a user API and created basic endpoints for
-                  the frontend. I built out the font end using React.js and used
-                  several components to achieve this - where possible, I created
-                  reusable components to keep my application as maintainable as
-                  possible. When I successfully plotted the pubs and users from the
-                  back end, I realised it was time to migrate to a database. Enter
-                  Knex.js and MySQL, allowing me to expand functionality by adding
-                  tables for groups, users in groups, and pubs in groups.
+                  I've been using both GSAP and Framer Motion, so I wanted to use
+                  both in this project and decided which parts of the site would use
+                  which animation framework. I've also used Lenis Scroll before for a
+                  smooth scroll, however I decided to try Locomotive Scroll v5 (which
+                  is currently in beta) as it offers easy implementation, and is
+                  built off of Lenis Scroll
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
-                  Adding a pub crawl feature was a must. I used a node package to
-                  sort pubs by distance from the user&apos;s location, enhancing the
-                  app&apos;s usability. The same package helped calculate the best
-                  meeting spot for groups, further enhancing the user experience.
+                  GSAP has a seriously easy method of implementing a parallax scroll
+                  so I decided to use this for the landing page. Framer Motion took
+                  up the rest of the scrolling animations
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
-                  I created user authnetication so that a user could sign up and
-                  login, which saw me integrate JWT tokens. The user had to login to
-                  access specific features of the app, such as a profile page which
-                  showed them their favourite drink and groups they&apos;re part of.
-                  The intention was to create a more personal touch to the app to
-                  improve the user experience.
+                  I decided to make this a desktop only website, because of the
+                  scroll animations implemented and I felt the user would get more
+                  out of looking at images on a larger screen
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
-                  Finally, I polished the frontend with features like pub forms and
-                  group creation. Users can now effortlessly create and join groups,
-                  adding pubs to their group map. The frontend communicates with the
-                  backend, ensuring real-time updates.
+                  Finally I created a footer with my details and links to my sites. I
+                  wanted to jazz this up so implement an animation to spread out each
+                  character from the links to my sites
                 </motion.p>
               </motion.div>
             ) : null}

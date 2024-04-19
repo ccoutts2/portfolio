@@ -202,7 +202,7 @@ $max-width: 1550px;
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 10px;
   width: 30%;
-  max-width: 8rem;
+  max-width: 9.5rem;
   @include flex(row, center, stretch);
 }
 
@@ -255,8 +255,8 @@ $max-width: 1550px;
 
 .cardContainer {
   position: relative;
-  height: 28rem;
-  width: 28rem;
+  height: 40rem;
+  width: 70rem;
   overflow: hidden;
 
   .image {
