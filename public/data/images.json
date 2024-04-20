@@ -6,10 +6,11 @@
   { "id": 5, "imageSrc": "/images/triangulate-8.svg" },
   { "id": 6, "imageSrc": "/images/france2k23-1.svg" },
   { "id": 7, "imageSrc": "/images/triangulate-6.svg" },
-  { "id": 8, "imageSrc": "/images/triangulate-7.svg" },
-  { "id": 9, "imageSrc": "/images/france2k23-3.svg" },
-  { "id": 10, "imageSrc": "/images/triangulate-9.svg" },
-  { "id": 11, "imageSrc": "/images/triangulate-10.svg" },
-  { "id": 12, "imageSrc": "/images/gollum-1.svg" },
-  { "id": 13, "imageSrc": "/images/triangulate-12.svg" }
+  { "id": 8, "imageSrc": "/images/france2k23-2.svg" },
+  { "id": 9, "imageSrc": "/images/triangulate-7.svg" },
+  { "id": 10, "imageSrc": "/images/france2k23-3.svg" },
+  { "id": 11, "imageSrc": "/images/triangulate-9.svg" },
+  { "id": 12, "imageSrc": "/images/triangulate-10.svg" },
+  { "id": 13, "imageSrc": "/images/gollum-1.svg" },
+  { "id": 14, "imageSrc": "/images/triangulate-12.svg" }
 ]
