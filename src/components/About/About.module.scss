@@ -43,12 +43,14 @@ $max-width: 1550px;
 
   @include desktop {
     padding-inline: 4rem;
+    @include flex(column, flex-start, flex-start);
+    width: 100%;
   }
 }
 
 .text_container {
   @include desktop {
-    @include flex(row, flex-end, center);
+    @include flex(row, flex-start, center);
   }
 }
 
@@ -57,8 +59,12 @@ $max-width: 1550px;
   padding: 0;
   width: 100%;
 
+  .italic {
+    font-style: italic;
+  }
+
   @include desktop {
-    font-size: 1rem;
+    font-size: 5vh;
   }
 }
 
@@ -68,5 +74,6 @@ $max-width: 1550px;
 
   @include desktop {
     @include flex(row, flex-start, stretch);
+    width: 100%;
   }
 }

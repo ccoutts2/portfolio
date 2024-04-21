@@ -52,6 +52,7 @@ $max-width: 1550px;
   width: 100%;
   @include flex(row, flex-start, stretch);
   gap: 0.5rem;
+  clip-path: polygon("0 0", "0 0", "0 100%", "0 100%");
 
   @include desktop {
     padding-bottom: 1rem;

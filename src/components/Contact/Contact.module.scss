@@ -42,11 +42,12 @@ $max-width: 1550px;
 
 .contact {
   padding-top: 1rem;
+  margin: 10vh 0;
 }
 
 .contact_section {
   padding: 1rem 0;
-  border-top: 1px solid black;
+  height: 65vh;
   @include flex(row, flex-start, flex-end);
 
   @include tablet {
@@ -59,7 +60,7 @@ $max-width: 1550px;
 }
 
 .contact_email {
-  padding-left: 1rem;
+  padding-top: 3vh;
 }
 
 .contact_button {
@@ -68,8 +69,26 @@ $max-width: 1550px;
   @include flex(row, flex-start, stretch);
 }
 
-.image {
-  background-color: $primary-background;
-  object-fit: cover;
-  rotate: 90deg;
+.text_container {
+  p {
+    font-size: 7vh;
+    width: 80%;
+
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.image_container {
+  height: 100%;
+  width: 20rem;
+  position: relative;
+
+  .image {
+    background-color: $primary-background;
+    object-fit: cover;
+    overflow: hidden;
+    clip-path: polygon("0 0", "0 0", "0 100%", "0 100%");
+  }
 }

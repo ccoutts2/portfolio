@@ -16,7 +16,9 @@ const About = () => {
       <div className={styles.text_container}>
         <p className={styles.text}>
           I am software engineer based in London. I enjoy combining my love for
-          problem solving and logic, with creative flare.
+          <span className={styles.italic}>problem solving</span> and{" "}
+          <span className={styles.italic}>logic</span>, with{" "}
+          <span className={styles.italic}>creative flare.</span>
         </p>
       </div>
       <div className={styles.button_container}>

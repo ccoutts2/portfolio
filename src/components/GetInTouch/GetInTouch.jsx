@@ -1,9 +1,10 @@
 import styles from "./GetInTouch.module.scss";
-import React, { useState, useRef } from "react";
+import React, { useLayoutEffect, useState, useRef } from "react";
 import chris from "../../assets/images/chris-pic2.svg";
 import Image from "next/image";
 import Button from "../Button/Button";
 import emailjs from "@emailjs/browser";
+import gsap from "gsap";
 
 const GetInTouch = () => {
   const [activeLabel, setActiveLabel] = useState(null);
@@ -102,9 +103,32 @@ const GetInTouch = () => {
     setActiveLabel(null);
   };
 
+  const image = useRef();
+  const text = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(image.current, {
+        opacity: 1,
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        ease: "power4.inOut",
+        duration: 1.5,
+        delay: 1,
+      });
+      gsap.from(text.current, {
+        opacity: 0,
+        x: "-200px",
+        ease: "power3.Out",
+        delay: 2,
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <main className={styles.container}>
-      <section className={styles.top_section}>
+      <section ref={image} className={styles.top_section}>
         <Image
           className={styles.image}
           src={chris}
@@ -124,7 +148,9 @@ const GetInTouch = () => {
         </div>
       </section>
 
-      <h2 className={styles.heading}>Let&apos;s work together</h2>
+      <h2 ref={text} className={styles.heading}>
+        Let&apos;s work together
+      </h2>
 
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles.form_col}>
