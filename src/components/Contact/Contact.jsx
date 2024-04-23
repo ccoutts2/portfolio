@@ -58,6 +58,7 @@ const Contact = () => {
               className={styles.contact_button}
               href="mailto:chris.dcoutts@gmail.com">
               <Button
+                style={{ fontSize: "0.5rem" }}
                 className={styles.button}
                 label={`chris.dcoutts@gmail.com \u2198`}
               />
