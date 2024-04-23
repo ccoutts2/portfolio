@@ -84,11 +84,11 @@ $max-width: 1550px;
   height: 100%;
   width: 20rem;
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
   .image {
     background-color: $primary-background;
     object-fit: cover;
     overflow: hidden;
-    clip-path: polygon("0 0", "0 0", "0 100%", "0 100%");
   }
 }

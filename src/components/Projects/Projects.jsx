@@ -13,7 +13,6 @@ const Projects = ({ index, title, description, setModal }) => {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         ease: "power4.inOut",
         duration: 1.5,
-        delay: 0.8,
       });
     });
 

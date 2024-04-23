@@ -33,9 +33,9 @@ const Contact = () => {
           end: "center center",
           once: true,
         },
-        opacity: 1,
+
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-        ease: "power3.Out",
+        ease: "power4.inOut",
       });
     });
 

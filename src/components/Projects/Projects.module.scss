@@ -54,11 +54,7 @@ $primary-background: #cdcdcd;
   border-top: 1px solid rgb(57, 57, 57);
   cursor: pointer;
   transition: all 0.2s linear;
-  clip-path: polygon("0 0", "0 0", "0 100%", "0 100%");
-
-  @include tablet {
-    padding-inline: 0;
-  }
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .project_container:hover {

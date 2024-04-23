@@ -62,7 +62,10 @@ export default function Triangulate() {
   }, []);
 
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      smooth: true,
+      speedRatio: 0.001,
+    });
 
     function raf(time) {
       lenis.raf(time);
@@ -131,7 +134,7 @@ export default function Triangulate() {
                 </Link>
                 <Link
                   className={styles.link}
-                  href="https://rugby-world-cup.vercel.app/"
+                  href="https://france2k23.chris-coutts.com/"
                   target="_blank">
                   <Button label={`Live Website \u2198`} />
                 </Link>
