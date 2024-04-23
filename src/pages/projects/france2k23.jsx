@@ -192,12 +192,12 @@ export default function Triangulate() {
                   city and built up an assets folder
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
-                  I've been using both GSAP and Framer Motion, so I wanted to use
-                  both in this project and decided which parts of the site would use
-                  which animation framework. I've also used Lenis Scroll before for a
-                  smooth scroll, however I decided to try Locomotive Scroll v5 (which
-                  is currently in beta) as it offers easy implementation, and is
-                  built off of Lenis Scroll
+                  I&apos;ve been using both GSAP and Framer Motion, so I wanted to
+                  use both in this project and decided which parts of the site would
+                  use which animation framework. I&apos;ve also used Lenis Scroll
+                  before for a smooth scroll, however I decided to try Locomotive
+                  Scroll v5 (which is currently in beta) as it offers easy
+                  implementation, and is built off of Lenis Scroll
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
                   GSAP has a seriously easy method of implementing a parallax scroll
@@ -205,9 +205,12 @@ export default function Triangulate() {
                   up the rest of the scrolling animations
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
-                  I decided to make this a desktop only website, because of the
-                  scroll animations implemented and I felt the user would get more
-                  out of looking at images on a larger screen
+                  I initially anted to make this a desktop only website, because of
+                  the scroll animations implemented and I felt the user would get
+                  more out of looking at images on a larger screen. However this
+                  didn&apos;t sit right with me when once I completed it, so I went
+                  back to refactor for mobile and tablet view. However, I still feel
+                  strongly that the best experience can be gained while on desktop
                 </motion.p>
                 <motion.p variants={item} className={styles.process_text}>
                   Finally I created a footer with my details and links to my sites. I
