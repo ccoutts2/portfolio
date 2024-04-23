@@ -255,9 +255,14 @@ $max-width: 1550px;
 
 .cardContainer {
   position: relative;
-  height: 40rem;
-  width: 70rem;
+  height: 25rem;
+  width: 40rem;
   overflow: hidden;
+
+  @include tablet {
+    height: 40rem;
+    width: 70rem;
+  }
 
   .image {
     height: 100%;
