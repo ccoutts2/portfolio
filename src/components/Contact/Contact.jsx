@@ -43,7 +43,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <motion.main
+    <motion.section
       variants={textAnimate}
       initial="hidden"
       animate="visible"
@@ -74,7 +74,7 @@ const Contact = () => {
           />
         </div>
       </section>
-    </motion.main>
+    </motion.section>
   );
 };
 

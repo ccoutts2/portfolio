@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styles from "./About.module.scss";
@@ -12,10 +11,10 @@ const About = () => {
   };
 
   return (
-    <main className={styles.about}>
+    <section className={styles.about}>
       <div className={styles.text_container}>
         <p className={styles.text}>
-          I am software engineer based in London. I enjoy combining my love for
+          I am a software engineer based in London. I enjoy combining my love for
           <span className={styles.italic}>problem solving</span> and{" "}
           <span className={styles.italic}>logic</span>, with{" "}
           <span className={styles.italic}>creative flare.</span>
@@ -28,7 +27,7 @@ const About = () => {
           onClick={onClick}
         />
       </div>
-    </main>
+    </section>
   );
 };
 

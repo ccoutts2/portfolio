@@ -49,22 +49,49 @@ $max-width: 1550px;
 }
 
 .text_container {
+  position: relative;
+  padding-top: 3rem;
   @include desktop {
-    @include flex(row, flex-start, center);
+    @include flex(column, flex-start, center);
+  }
+
+  P {
+    margin: 0px;
+    position: relative;
   }
 }
 
 .text {
   font-size: 0.8rem;
-  padding: 0;
+  padding: 0.5rem;
   width: 100%;
+  line-height: 1.4rem;
+  letter-spacing: 0.05rem;
+
+  &:first-of-type {
+    &::before {
+      content: "Info";
+      border: 1px solid black;
+      border-radius: 20rem;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.8rem;
+
+      @include desktop {
+        padding: 0.35rem 1.2rem;
+
+        font-size: 5vh;
+      }
+    }
+  }
 
   .italic {
     font-style: italic;
+    padding: 0rem 0.2rem;
   }
 
   @include desktop {
     font-size: 5vh;
+    line-height: 3rem;
   }
 }
 

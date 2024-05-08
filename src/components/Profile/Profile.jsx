@@ -66,7 +66,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <motion.main
+    <motion.section
       variants={textAnimate}
       initial="hidden"
       animate="visible"
@@ -126,7 +126,7 @@ const Profile = () => {
           </div>
         </section>
       </section>
-    </motion.main>
+    </motion.section>
   );
 };
 
