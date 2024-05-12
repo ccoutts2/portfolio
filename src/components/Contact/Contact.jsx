@@ -8,34 +8,40 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Contact = () => {
-  const textAnimate = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
   const image = useRef();
+  const text = useRef();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
+      gsap.set(text.current, { y: 100, opacity: 0 });
       gsap.registerPlugin(ScrollTrigger);
       gsap.to(image.current, {
         scrollTrigger: {
           trigger: image.current,
-          scrub: true,
-          start: "0px bottom",
-          end: "center center",
+          scrub: false,
+          start: "top center+=20",
+          end: "center bottom",
           once: true,
         },
 
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-        ease: "power4.inOut",
+        ease: "power1.inOut",
+        duration: 2,
+      });
+      gsap.to(text.current, {
+        scrollTrigger: {
+          trigger: text.current,
+          scrub: false,
+          start: "top bottom",
+          end: "bottom bottom",
+          once: true,
+          markers: true,
+        },
+
+        ease: "pwer4.inOut",
+        opacity: 1,
+        y: 0,
+        duration: 1,
       });
     });
 
@@ -43,13 +49,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <motion.section
-      variants={textAnimate}
-      initial="hidden"
-      animate="visible"
-      className={styles.contact}>
+    <section className={styles.contact}>
       <section className={styles.contact_section}>
-        <div className={styles.text_container}>
+        <div ref={text} className={styles.text_container}>
           <p>
             Want to work <span>together</span> on <span>your</span> project?
           </p>
@@ -74,7 +76,7 @@ const Contact = () => {
           />
         </div>
       </section>
-    </motion.section>
+    </section>
   );
 };
 
