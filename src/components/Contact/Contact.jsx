@@ -35,7 +35,6 @@ const Contact = () => {
           start: "top bottom",
           end: "bottom bottom",
           once: true,
-          markers: true,
         },
 
         ease: "pwer4.inOut",
