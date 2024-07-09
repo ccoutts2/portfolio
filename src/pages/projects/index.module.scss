@@ -233,26 +233,6 @@ $max-width: 1550px;
   height: 100%;
 }
 
-.process {
-  padding: 1rem 1rem 0;
-
-  @include tablet {
-    padding-inline: 2rem;
-  }
-
-  @include desktop {
-    padding-inline: 4rem;
-  }
-}
-
-.process_button {
-  padding-bottom: 1rem;
-}
-
-.process_text {
-  padding: 0.5rem 0;
-}
-
 .cardContainer {
   position: relative;
   height: 25rem;
