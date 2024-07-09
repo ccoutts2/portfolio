@@ -7,12 +7,13 @@ import Link from "next/link";
 import Head from "next/head";
 import Inner from "@/components/Inner/Inner";
 import NavBar from "@/components/NavBar/NavBar";
+import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 import Footer from "@/components/Footer/Footer";
 import Button from "@/components/Button/Button";
 import Lenis from "@studio-freight/lenis";
 import { motion } from "framer-motion";
 
-export default function Triangulate() {
+export default function Page() {
   const [techStack, setTechStack] = useState(null);
   const [showText, setShowText] = useState(false);
 
@@ -78,35 +79,8 @@ export default function Triangulate() {
       </Head>
       <Inner>
         <NavBar />
-        <section className={styles.main}>
-          <div className={styles.content}>
-            <h1 className={styles.heading}>/ gollum&apos;s cave</h1>
-            <section className={styles.info_container}>
-              <div className={styles.info}>
-                <h3 className={styles.header}>year</h3>
-                <p>2024</p>
-              </div>
-              <div className={styles.info}>
-                <h3 className={styles.header}>role</h3>
-                <p>Design and Development</p>
-              </div>
-              <div className={styles.button_container}>
-                <Link
-                  className={styles.link}
-                  href="https://github.com/ccoutts2/lotr-riddle-game-client"
-                  target="_blank">
-                  <Button label={`GitHub \u2198`} />
-                </Link>
-              </div>
-            </section>
-
-            <div className={styles.summary}>
-              <p>
-                Enter Gollum&apos;s cave and answer all the riddles to leave with the
-                ring. 24 Hour Pair Programming Hackathon
-              </p>
-            </div>
-          </div>
+        <ProjectPageHeading title="gollum's cave" year="2024" role="Design & Development" gitHubLink="https://github.com/ccoutts2/lotr-riddle-game-client" liveWebsite={false} summary="Enter Gollum's cave and answer all the riddles to leave with the
+                ring. 24 Hour Pair Programming Hackathon" />
           <div className={styles.spacer}></div>
 
           <div className={styles.video_container}>
@@ -170,7 +144,6 @@ export default function Triangulate() {
               </motion.div>
             ) : null}
           </section>
-        </section>
         <Footer />
       </Inner>
     </main>

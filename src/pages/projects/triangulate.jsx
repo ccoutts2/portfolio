@@ -13,8 +13,9 @@ import Image from "next/image";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import useDimension from "@/hooks/useDimension";
+import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 
-export default function Triangulate() {
+export default function Page() {
   const [techStack, setTechStack] = useState(null);
   const [showText, setShowText] = useState(false);
 
@@ -104,41 +105,9 @@ export default function Triangulate() {
       </Head>
       <Inner>
         <NavBar />
-        <section className={styles.main}>
-          <div className={styles.content}>
-            <h1 className={styles.heading}>/ triangulate</h1>
-            <section className={styles.info_container}>
-              <div className={styles.info}>
-                <h3 className={styles.header}>year</h3>
-                <p>2024</p>
-              </div>
-              <div className={styles.info}>
-                <h3 className={styles.header}>role</h3>
-                <p>Design and Development</p>
-              </div>
-              <div className={styles.button_container}>
-                <Link
-                  className={styles.link}
-                  href="https://github.com/ccoutts2/triangulate-project"
-                  target="_blank">
-                  <Button label={`GitHub \u2198`} />
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="https://www.linkedin.com/posts/chris-coutts_hey-linkedin-introducing-you-to-triangulate-activity-7165049293173682176-0-de?utm_source=share&utm_medium=member_desktop"
-                  target="_blank">
-                  <Button label={`Video Demo \u2198`} />
-                </Link>
-              </div>
-            </section>
-            <div className={styles.summary}>
-              <p>
-                Meet up effortlessly with your friends. Triangulate let&apos;s you
+        <ProjectPageHeading title="triangulate" year="2024" role="Design & Development" gitHubLink="https://github.com/ccoutts2/triangulate-project" liveWebsite={false} videoLink="https://www.linkedin.com/posts/chris-coutts_hey-linkedin-introducing-you-to-triangulate-activity-7165049293173682176-0-de?utm_source=share&utm_medium=member_desktop" videoDemo={true} summary="Meet up effortlessly with your friends. Triangulate let's you
                 step into the map where you can discover the nearest and best pubs to
-                you.
-              </p>
-            </div>
-          </div>
+                you."/>
           <div className={styles.spacer}></div>
           <article ref={container} className={styles.gallery}>
             <Column images={[images[0], images[2], images[1]]} y={y} />
@@ -213,7 +182,6 @@ export default function Triangulate() {
               </motion.div>
             ) : null}
           </section>
-        </section>
         <Footer />
       </Inner>
     </main>

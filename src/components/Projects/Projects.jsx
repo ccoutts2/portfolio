@@ -1,23 +1,22 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import styles from "./Projects.module.scss";
 import Link from "next/link";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Projects = ({ index, title, description, setModal }) => {
   const container = useRef();
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
+  useGSAP(() => {
+   
       gsap.to(container.current, {
         opacity: 1,
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         ease: "power4.inOut",
         duration: 1.5,
       });
-    });
-
-    return () => ctx.revert();
-  }, []);
+    
+  }, { scope: container });
 
   return (
     <Link ref={container} className={styles.link} href={`/projects/${title}`}>

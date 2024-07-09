@@ -13,8 +13,9 @@ import Image from "next/image";
 import { useTransform, useScroll, motion, useInView } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import useDimension from "@/hooks/useDimension";
+import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 
-export default function Triangulate() {
+export default function Page() {
   const [techStack, setTechStack] = useState(null);
   const [showText, setShowText] = useState(false);
 
@@ -113,40 +114,9 @@ export default function Triangulate() {
       </Head>
       <Inner>
         <NavBar />
-        <section className={styles.main}>
-          <div className={styles.content}>
-            <h1 className={styles.heading}>/ france2k23</h1>
-            <section className={styles.info_container}>
-              <div className={styles.info}>
-                <h3 className={styles.header}>year</h3>
-                <p>2024</p>
-              </div>
-              <div className={styles.info}>
-                <h3 className={styles.header}>role</h3>
-                <p>Design and Development</p>
-              </div>
-              <div className={styles.button_container}>
-                <Link
-                  className={styles.link}
-                  href="https://github.com/ccoutts2/rugby-world-cup"
-                  target="_blank">
-                  <Button label={`GitHub \u2198`} />
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="https://france2k23.chris-coutts.com/"
-                  target="_blank">
-                  <Button label={`Live Website \u2198`} />
-                </Link>
-              </div>
-            </section>
-            <div className={styles.summary}>
-              <p>
-                An immersive image gallery experience of my trip around France for
-                the Rugby World Cup in 2023. Witness what I witnessed.
-              </p>
-            </div>
-          </div>
+
+        <ProjectPageHeading title="france 2k23" year="2024" role="Design & Development" gitHubLink="https://github.com/ccoutts2/rugby-world-cup" websiteLink="https://france2k23.chris-coutts.com/" summary="An immersive image gallery experience of my trip around France for
+                the Rugby World Cup in 2023. Witness what I witnessed." liveWebsite={true}/>
           <div className={styles.spacer}></div>
 
           <section ref={ref} className={styles.horizontalScroll}>
@@ -218,7 +188,6 @@ export default function Triangulate() {
               </motion.div>
             ) : null}
           </section>
-        </section>
         <Footer />
       </Inner>
     </main>
