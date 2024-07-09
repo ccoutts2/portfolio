@@ -3,7 +3,15 @@
     "id": 1,
     "title": "ewm-bespoke-interiors",
     "description": "Coming Soon",
-    "techStack": ["Next.js", "Typescript", "Framer Motion", "GSAP", "Lenis Scroll", "Locomotive Scroll", "TailwindCSS"],
+    "techStack": [
+      "Next.js",
+      "Typescript",
+      "Framer Motion",
+      "GSAP",
+      "Lenis Scroll",
+      "Locomotive Scroll",
+      "TailwindCSS"
+    ],
     "imageSrc": "/images/france2k23-modal.svg",
     "link": "/projects/ewm-bespoke-interiors",
     "color": "#F5F5EF"
@@ -12,7 +20,13 @@
     "id": 2,
     "title": "france2k23",
     "description": "Design & Development",
-    "techStack": ["Next.js", "Framer Motion", "GSAP", "Locomotive Scroll", "Scss"],
+    "techStack": [
+      "Next.js",
+      "Framer Motion",
+      "GSAP",
+      "Locomotive Scroll",
+      "Scss"
+    ],
     "imageSrc": "/images/france2k23-modal.svg",
     "link": "/projects/france2k23",
     "color": "#8E8CE9F"

@@ -13,6 +13,7 @@ import { useTransform, useScroll, motion, useInView } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 import RevealProjectInfo from "@/components/RevealProjectInfo/RevealProjectInfo";
+import ProjectTechStack from "@/components/ProjectTechStack/ProjectTechStack";
 
 export default function Page() {
   const [techStack, setTechStack] = useState(null);
@@ -119,16 +120,7 @@ export default function Page() {
         </section>
 
         <div className={styles.spacer}></div>
-        <section className={styles.about}>
-          <h4>Tech Stack</h4>
-          <article className={styles.card}>
-            {techStack[0].techStack.map((tech, index) => (
-              <div key={index} className={styles.tech_item}>
-                {tech}
-              </div>
-            ))}
-          </article>
-        </section>
+        <ProjectTechStack projectIndex={1} />
         <RevealProjectInfo paragraphs={paragraphs} />
         <Footer />
       </Inner>

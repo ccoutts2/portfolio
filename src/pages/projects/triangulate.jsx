@@ -1,25 +1,20 @@
 import globalStyles from "../../styles/globals.module.scss";
 import navBarStyles from "../../components/NavBar/NavBar.module.scss";
 import styles from "./index.module.scss";
-import React, { useRef, useEffect, useState } from "react";
-import axios from "axios";
-import Link from "next/link";
+import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import Inner from "@/components/Inner/Inner";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
-import Button from "@/components/Button/Button";
 import Image from "next/image";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import useDimension from "@/hooks/useDimension";
 import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 import RevealProjectInfo from "@/components/RevealProjectInfo/RevealProjectInfo";
+import ProjectTechStack from "@/components/ProjectTechStack/ProjectTechStack";
 
 export default function Page() {
-  const [techStack, setTechStack] = useState(null);
-  const [showText, setShowText] = useState(false);
-
   const images = [
     "triangulate-2.svg",
     "triangulate-12.svg",
@@ -52,19 +47,6 @@ export default function Page() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 2.8]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.7]);
 
-  const fetchTechStack = async () => {
-    try {
-      const { data } = await axios.get("/data/projects.json");
-      setTechStack(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchTechStack();
-  }, []);
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -75,10 +57,6 @@ export default function Page() {
 
     requestAnimationFrame(raf);
   }, []);
-
-  if (!techStack) {
-    return null;
-  }
 
   return (
     <main className={`${globalStyles.globals} ${navBarStyles}`}>
@@ -106,16 +84,7 @@ export default function Page() {
           <Column images={[images[4], images[7], images[8]]} y={y3} />
         </article>
         <div className={styles.spacer}></div>
-        <section className={styles.about}>
-          <h4>Tech Stack</h4>
-          <article className={styles.card}>
-            {techStack[1].techStack.map((tech, index) => (
-              <div key={index} className={styles.tech_item}>
-                {tech}
-              </div>
-            ))}
-          </article>
-        </section>
+        <ProjectTechStack projectIndex={2} />
         <RevealProjectInfo paragraphs={paragraphs} />
         <Footer />
       </Inner>

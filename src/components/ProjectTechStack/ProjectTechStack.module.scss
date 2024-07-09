@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap");
+
+$primary-background: #cdcdcd;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.about {
+  padding: 1rem;
+  text-align: center;
+
+  @include tablet {
+    padding-inline: 2rem;
+  }
+
+  @include desktop {
+    padding-inline: 4rem;
+  }
+}
+
+.card {
+  padding-top: 1rem;
+  @include flex(row, center, stretch);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech_item {
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
+  width: 30%;
+  max-width: 9.5rem;
+  @include flex(row, center, stretch);
+}

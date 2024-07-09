@@ -3,16 +3,14 @@ import navBarStyles from "../../components/NavBar/NavBar.module.scss";
 import styles from "./index.module.scss";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Link from "next/link";
 import Head from "next/head";
 import Inner from "@/components/Inner/Inner";
 import NavBar from "@/components/NavBar/NavBar";
 import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 import Footer from "@/components/Footer/Footer";
-import Button from "@/components/Button/Button";
 import Lenis from "@studio-freight/lenis";
-import { motion } from "framer-motion";
 import RevealProjectInfo from "@/components/RevealProjectInfo/RevealProjectInfo";
+import ProjectTechStack from "@/components/ProjectTechStack/ProjectTechStack";
 
 export default function Page() {
   const [techStack, setTechStack] = useState(null);
@@ -75,16 +73,7 @@ export default function Page() {
         </div>
 
         <div className={styles.spacer}></div>
-        <section className={styles.about}>
-          <h4>Tech Stack</h4>
-          <article className={styles.card}>
-            {techStack[2].techStack.map((tech, index) => (
-              <div key={index} className={styles.tech_item}>
-                {tech}
-              </div>
-            ))}
-          </article>
-        </section>
+        <ProjectTechStack projectIndex={3} />
         <RevealProjectInfo paragraphs={paragraphs} />
         <Footer />
       </Inner>

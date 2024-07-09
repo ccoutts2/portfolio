@@ -8,6 +8,7 @@ import navBarStyles from "../../components/NavBar/NavBar.module.scss";
 import styles from "./index.module.scss";
 import ProjectPageHeading from "@/components/ProjectPageHeading/ProjectPageHeading";
 import RevealProjectInfo from "@/components/RevealProjectInfo/RevealProjectInfo";
+import ProjectTechStack from "@/components/ProjectTechStack/ProjectTechStack";
 
 export default function Page() {
   const paragraphs = [
@@ -33,6 +34,7 @@ export default function Page() {
           summary="A commercial website showcasing EWM Bespoke Interior's services. Website is currently in development but feel free to view the GitHub repo."
         />
         <div className={styles.spacer}></div>
+        <ProjectTechStack projectIndex={0} />
         <RevealProjectInfo paragraphs={paragraphs} />
         <Footer />
       </Inner>
