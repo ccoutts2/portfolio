@@ -16,9 +16,6 @@ import RevealProjectInfo from "@/components/RevealProjectInfo/RevealProjectInfo"
 import ProjectTechStack from "@/components/ProjectTechStack/ProjectTechStack";
 
 export default function Page() {
-  const [techStack, setTechStack] = useState(null);
-  const [showText, setShowText] = useState(false);
-
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({ ref });
@@ -61,19 +58,6 @@ export default function Page() {
     "Lastly, I jazzed up the footer with my info and links to my sites. I thought it'd be fun to animate the characters spreading out from the links",
   ];
 
-  const fetchTechStack = async () => {
-    try {
-      const { data } = await axios.get("/data/projects.json");
-      setTechStack(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchTechStack();
-  }, []);
-
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
@@ -87,8 +71,6 @@ export default function Page() {
 
     requestAnimationFrame(raf);
   }, []);
-
-  if (!techStack) return null;
 
   return (
     <main className={`${globalStyles.globals} ${navBarStyles}`}>

@@ -1,8 +1,7 @@
 import globalStyles from "../../styles/globals.module.scss";
 import navBarStyles from "../../components/NavBar/NavBar.module.scss";
 import styles from "./index.module.scss";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Inner from "@/components/Inner/Inner";
 import NavBar from "@/components/NavBar/NavBar";
@@ -13,21 +12,6 @@ import RevealProjectInfo from "@/components/RevealProjectInfo/RevealProjectInfo"
 import ProjectTechStack from "@/components/ProjectTechStack/ProjectTechStack";
 
 export default function Page() {
-  const [techStack, setTechStack] = useState(null);
-
-  const fetchTechStack = async () => {
-    try {
-      const { data } = await axios.get("/data/projects.json");
-      setTechStack(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchTechStack();
-  }, []);
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -38,8 +22,6 @@ export default function Page() {
 
     requestAnimationFrame(raf);
   }, []);
-
-  if (!techStack) return null;
 
   const paragraphs = [
     "We began by creating our own API using Node.js and Express.js. This API housed all the questions, answer options, and correct answers for our quiz within a JSON file. Before diving into frontend development, we tested our API endpoint with Postman to ensure functionality",
