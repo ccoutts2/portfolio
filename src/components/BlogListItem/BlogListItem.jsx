@@ -7,7 +7,7 @@ const BlogListItem = ({ category, posts }) => {
       <div>
         <h2>{category}</h2>
         {posts.map((post, index) => (
-          <Link key={index} href={`/${post.id}`}>
+          <Link key={index} href={`/posts/${post.id}`}>
             {post.title}
           </Link>
         ))}

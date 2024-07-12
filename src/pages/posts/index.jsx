@@ -1,6 +1,7 @@
 import React from "react";
 import BlogListItem from "@/components/BlogListItem/BlogListItem";
-import { getCategorisedPosts } from "../../lib/posts";
+import { getCategorisedPosts } from "../../../lib/posts";
+import styles from "../../styles/globals.module.scss";
 
 export async function getStaticProps() {
   const allPostsData = getCategorisedPosts();
@@ -13,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }) {
   return (
-    <section>
+    <section className={styles.globals}>
       <header>
         <h1>Blog Posts</h1>
       </header>

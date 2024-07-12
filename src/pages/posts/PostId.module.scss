@@ -1,0 +1,62 @@
+$primary-background: #cdcdcd;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$max-width: 1550px;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-content {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.main {
+  padding: 1rem;
+  background-color: #cdcdcd;
+  width: 100vw;
+
+  @include tablet {
+    padding: 1rem 2rem 0;
+  }
+
+  @include desktop {
+    padding: 1rem 4rem 0.5rem;
+  }
+
+  .article {
+    @include flex(column, center, flex-start);
+    gap: 2rem;
+    line-height: 1.8rem;
+    padding-top: 2rem;
+  }
+
+  p:first-child {
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+
+  p:first-child > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

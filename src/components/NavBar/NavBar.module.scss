@@ -81,21 +81,18 @@ $max-width: 1550px;
     text-decoration: none;
     color: black;
     display: none;
+    gap: 1rem;
 
     @include desktop {
       display: flex;
     }
   }
 
-  .links {
-    text-decoration: none;
-    color: black;
-  }
-
-  .project_link {
+  .item {
     text-decoration: none;
     color: black;
     display: none;
+    padding-left: 2rem;
 
     @include desktop {
       display: flex;
@@ -106,7 +103,6 @@ $max-width: 1550px;
   .link {
     text-decoration: none;
     color: black;
-    padding-left: 2rem;
 
     @include desktop {
       font-size: 1.4rem;

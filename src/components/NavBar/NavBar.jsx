@@ -58,7 +58,7 @@ const NavBar = () => {
   return (
     <header className={styles.nav}>
       <div className={styles.title_container}>
-        <Link href="/" className={styles.links}>
+        <Link href="/" className={styles.link}>
           <h1 className={styles.title}>Chris Coutts</h1>
         </Link>
         <Clock />
@@ -66,20 +66,29 @@ const NavBar = () => {
 
       <div className={styles.list_container}>
         <ul className={styles.list}>
-          <Link
-            href="https://github.com/ccoutts2/"
-            target="_blank"
-            className={styles.project_links}>
-            {" "}
-            <li className={styles.project_link}>GitHub</li>
-          </Link>
-          <Link href="/about" className={styles.links}>
-            <li className={styles.link}>About</li>
-          </Link>
-          <Link href="/contact" className={styles.links}>
-            {" "}
-            <li className={styles.link}>Contact</li>
-          </Link>
+          <li className={styles.item}>
+            <Link
+              href="https://github.com/ccoutts2/"
+              target="_blank"
+              className={styles.link}>
+              GitHub
+            </Link>
+          </li>
+          <li className={styles.item}>
+            <Link href="/about" className={styles.link}>
+              About
+            </Link>
+          </li>
+          <li className={styles.item}>
+            <Link href="/contact" className={styles.link}>
+              Contact
+            </Link>
+          </li>
+          <li className={styles.item}>
+            <Link href="/posts" className={styles.link}>
+              Blog
+            </Link>
+          </li>
 
           <div className={styles.menu_header}>
             <motion.div
