@@ -4,7 +4,7 @@ import { getCategorisedPosts } from "../../../lib/posts";
 import styles from "../../styles/globals.module.scss";
 
 export async function getStaticProps() {
-  const allPostsData = getCategorisedPosts();
+  const allPostsData = await getCategorisedPosts();
   return {
     props: {
       allPostsData,

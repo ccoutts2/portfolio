@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./NavBar.module.scss";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { AnimatePresence, motion } from "framer-motion";
@@ -55,11 +55,41 @@ const NavBar = () => {
     return <>{currentTime}</>;
   };
 
+  const header = useRef(null);
+  const walk = 50;
+
+  const shadow = (e) => {
+    const { offsetWidth: width, offsetHeight: height } = header.current;
+    let { offsetX: x, offsetY: y } = e;
+
+    if (this !== e.target) {
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    }
+
+    const xWalk = Math.round(x / width + walk - walk / 2);
+    const yWalk = Math.round(y / height + walk - walk / 2);
+
+    header.current.style.textShadow = `${xWalk}px ${yWalk}px 0 red`;
+  };
+
+  useEffect(() => {
+    if (header.current) {
+      header.current.addEventListener("mousemove", shadow);
+    }
+
+    if (!header.current) {
+      header.current.removeEventListener("mousemove", shadow);
+    }
+  }, []);
+
   return (
     <header className={styles.nav}>
       <div className={styles.title_container}>
         <Link href="/" className={styles.link}>
-          <h1 className={styles.title}>Chris Coutts</h1>
+          <h1 ref={header} className={styles.title}>
+            Chris Coutts
+          </h1>
         </Link>
         <Clock />
       </div>

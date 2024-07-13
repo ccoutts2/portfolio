@@ -1,10 +1,11 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import styles from "./Contact.module.scss";
 import Button from "../Button/Button";
 import chris from "../../assets/images/chris-smart2.svg";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Contact = () => {
@@ -20,27 +21,27 @@ const Contact = () => {
     },
   };
 
+  const container = useRef();
   const image = useRef();
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
+  useGSAP(
+    () => {
       gsap.registerPlugin(ScrollTrigger);
       gsap.to(image.current, {
         scrollTrigger: {
           trigger: image.current,
-          scrub: true,
-          start: "0px bottom",
-          end: "center center",
-          once: true,
+          scrub: false,
+          start: "top center",
+          end: "bottom bottom",
         },
 
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         ease: "power4.inOut",
+        duration: 4,
       });
-    });
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: container }
+  );
 
   return (
     <motion.section
@@ -48,7 +49,7 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
       className={styles.contact}>
-      <section className={styles.contact_section}>
+      <section ref={container} className={styles.contact_section}>
         <div className={styles.text_container}>
           <p>
             Want to work <span>together</span> on <span>your</span> project?
