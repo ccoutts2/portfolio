@@ -27,36 +27,12 @@ $max-width: 1550px;
   align-items: $align;
 }
 
-.main {
+.article {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  min-height: 20vh;
+  @include flex(column, flex-start, center);
   padding: 1rem;
-  background-color: #cdcdcd;
-  width: 100vw;
-
-  @include tablet {
-    padding: 1rem 2rem 0;
-  }
-
-  @include desktop {
-    padding: 1rem 4rem 0.5rem;
-  }
-
-  .article {
-    @include flex(column, center, flex-start);
-    gap: 2rem;
-    line-height: 1.8rem;
-    padding-top: 2rem;
-  }
-
-  p:first-child {
-    width: 60vw;
-    height: 70vh;
-    margin: 0 auto;
-    margin-top: 4rem;
-  }
-
-  p:first-child > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+  gap: 1rem;
+  width: 100%;
 }
