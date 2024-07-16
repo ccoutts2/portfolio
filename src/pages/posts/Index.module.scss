@@ -26,9 +26,9 @@ $max-width: 1550px;
   justify-content: $justify;
   align-items: $align;
 }
+
 .page_content {
   height: 100vh;
-  width: 100vw;
 }
 
 .header {
@@ -41,23 +41,15 @@ $max-width: 1550px;
 
 .articles {
   position: relative;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1rem;
-  @include flex(column, flex-start, center);
-  width: 100%;
-  gap: 2rem;
+  left: 20%;
+  top: 5%;
+
+  @include desktop {
+    left: 40%;
+    top: 10%;
+  }
 }
 
 .reorder {
-  position: absolute;
-  margin-bottom: 1rem;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  &:nth-child(2) {
-    left: 1%;
-  }
+  position: relative;
 }

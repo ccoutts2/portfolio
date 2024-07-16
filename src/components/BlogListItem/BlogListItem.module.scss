@@ -30,9 +30,44 @@ $max-width: 1550px;
 .article {
   border: 1px solid black;
   border-radius: 0.5rem;
-  min-height: 20vh;
-  @include flex(column, flex-start, center);
+  position: absolute;
+  max-width: 12rem;
+  min-height: 10rem;
   padding: 1rem;
-  gap: 1rem;
-  width: 100%;
+  @include flex(column, center, center);
+  gap: 0.8rem;
+  background-color: red;
+  color: black;
+}
+
+.revealed {
+  &:nth-child(2) {
+    margin-top: 20rem;
+  }
+
+  &:nth-child(3) {
+    left: 50%;
+  }
+
+  &:nth-child(4) {
+    left: 50%;
+    margin-top: 20rem;
+  }
+
+  @include desktop {
+    &:nth-child(1) {
+      margin-top: 0;
+      margin-right: 10rem;
+    }
+
+    &:nth-child(2) {
+      margin-top: 0;
+      margin-left: 20rem;
+    }
+
+    &:nth-child(3) {
+      margin-top: 0;
+      margin-right: 20rem;
+    }
+  }
 }

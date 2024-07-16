@@ -38,7 +38,6 @@ export async function getStaticProps({ params }) {
   const { postId } = params;
   const postData = await getPostsData(postId);
 
-  console.log(postData);
   return {
     props: {
       postData,
