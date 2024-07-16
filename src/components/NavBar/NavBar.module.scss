@@ -42,6 +42,7 @@ $max-width: 1550px;
   @include flex(row, space-between, flex-end);
   border-bottom: 1px solid black;
   padding-inline: 1rem;
+  background-color: #cdcdcd;
 
   @include tablet {
     padding-inline: 2rem;

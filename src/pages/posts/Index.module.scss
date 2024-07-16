@@ -29,6 +29,15 @@ $max-width: 1550px;
 
 .page_content {
   height: 100vh;
+  background-color: $primary-background;
+
+  @include tablet {
+    padding-inline: 2rem;
+  }
+
+  @include desktop {
+    padding-inline: 3rem;
+  }
 }
 
 .header {
@@ -41,15 +50,22 @@ $max-width: 1550px;
 
 .articles {
   position: relative;
-  left: 20%;
+  padding-left: 1rem;
   top: 5%;
 
   @include desktop {
-    left: 40%;
     top: 10%;
   }
 }
 
 .reorder {
   position: relative;
+}
+
+.text_section {
+  margin-top: 50vh;
+
+  p {
+    font-size: 4vh;
+  }
 }

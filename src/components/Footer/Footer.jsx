@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div>
+    <section className={styles.footer}>
       <div>
-        <section className={styles.links}>
+        <div className={styles.links}>
           <div className={styles.links_container}>
             <h4 className={styles.container_header}>Sitemap</h4>
             <Link href="/" className={styles.nav_link}>
@@ -34,12 +34,12 @@ const Footer = () => {
               <h5 className={styles.container_text}>github</h5>
             </Link>
           </div>
-        </section>
+        </div>
       </div>
       <div className={styles.footer_message}>
         <p>Website designed and built by Chris Coutts</p>
       </div>
-    </div>
+    </section>
   );
 };
 

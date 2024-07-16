@@ -32,12 +32,17 @@ $max-width: 1550px;
   border-radius: 0.5rem;
   position: absolute;
   max-width: 12rem;
-  min-height: 10rem;
+  min-height: 17rem;
   padding: 1rem;
-  @include flex(column, center, center);
+  @include flex(column, flex-start, center);
   gap: 0.8rem;
-  background-color: red;
+  background-color: #e5d4e6;
   color: black;
+}
+
+.article_link {
+  color: black;
+  text-decoration: none;
 }
 
 .revealed {
@@ -57,7 +62,6 @@ $max-width: 1550px;
   @include desktop {
     &:nth-child(1) {
       margin-top: 0;
-      margin-right: 10rem;
     }
 
     &:nth-child(2) {
@@ -66,8 +70,15 @@ $max-width: 1550px;
     }
 
     &:nth-child(3) {
+      left: 0%;
       margin-top: 0;
-      margin-right: 20rem;
+      margin-left: 40rem;
+    }
+
+    &:nth-child(4) {
+      margin-top: 0;
+      left: 0%;
+      margin-left: 60rem;
     }
   }
 }
